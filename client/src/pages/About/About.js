@@ -25,19 +25,19 @@ const About = () => {
                         <div className="col-md-4 col-xl-4 col-lg-4 col-xs-12 profile-item text-center">
                             <h3>Codeforces</h3>
                             <a href="https://www.geeksforgeeks.org/user/sagarpkdas_31/" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000" alt="Codeforces" className="profile-logo" />
+                                <img src="https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000" alt="Codeforces" className="profile-logo codeforces-logo"  />
                             </a>
                         </div>
                         <div className="col-md-4 col-xl-4 col-lg-4 col-xs-12 profile-item text-center">
                             <h3>LeetCode</h3>
                             <a href="https://leetcode.com/u/sagarkumarrdas2002/" target="_blank" rel="noopener noreferrer">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" className="profile-logo" />
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode"  className="profile-logo leetcode-logo"/>
                             </a>
                         </div>
                         <div className="col-md-4 col-xl-4 col-lg-4 col-xs-12 profile-item text-center">
                             <h3>CodeChef</h3>
                             <a href="https://www.codechef.com/users/sagarkdas1015" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/?size=100&id=O4SEeX66BY8o&format=png&color=000000" alt="CodeChef" className="profile-logo" />
+                                <img src="https://img.icons8.com/?size=100&id=O4SEeX66BY8o&format=png&color=000000" alt="CodeChef" className="profile-logo codechef-logo"  />
                             </a>
                         </div>
                     </div>
