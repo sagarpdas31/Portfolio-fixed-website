@@ -9,8 +9,7 @@ const About = () => {
                 <div className="about" id="about">
                     <div className="row">
                         <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
-                            <img src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/e76d4296-43f3-493b-9d50-f8e5c142d06c/2117667014/boys-profile-picture-screenshot.png" alt="profile_pic" />
-
+                            <img src="https://drive.google.com/file/d/1IrapLcB3EcUsSdJGWdf__cUTgo0Z3dZv/view?usp=drive_link" />
                         </div>
                         <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content p-3" id="grow">
                             <h1 className='text-center'>About Me</h1>
