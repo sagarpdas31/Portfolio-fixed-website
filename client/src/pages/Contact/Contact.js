@@ -21,11 +21,10 @@ const Contact = () => {
         try {
             // Send data to backend API
             // const res = await axios.post("http://localhost:8080/api/v1/portfolio/sendEmail", {
-            const res = await axios.post("/", {
-
+            // const res = await axios.post("/api/v1/portfolio/sendEmail", {
                 name,
                 email,
-                message: msg,  // Ensure key matches backend's expectation
+                message: msg,  
             });
 
             if (res.data.success) {
