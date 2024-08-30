@@ -195,7 +195,7 @@ const Project = () => {
                                     <div className="button-row">
                                         <a
                                             className="ad-btn"
-                                            href="https://github.com/techinfo-youtube/ecommerce-app-2023"
+                                            href="https://portfolio-fixed-website.onrender.com"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -203,7 +203,7 @@ const Project = () => {
                                         </a>
                                         <a
                                             className="ad-btn"
-                                            href="https://github.com/techinfo-youtube/ecommerce-app-2023"
+                                            href="https://github.com/Sagarkumardas2002/Portfolio-fixed-website/tree/main"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
