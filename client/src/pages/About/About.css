@@ -55,18 +55,17 @@ text-align: justify;
     margin-top: -20px;
 }
 
-/* Specific borders for each logo */
-.codeforces-logo {
-    border: 3px solid yellow;
-}
-
-.leetcode-logo {
-    border: 3px solid yellow;
-}
-
+/* Specific borders for each logo with circular shape and extra space */
+.codeforces-logo,
+.leetcode-logo,
 .codechef-logo {
-    border: 3px solid yellow;
+    border: 5px solid yellow; /* Increased border width */
+    padding: 10px; /* Added space between the logo and the border */
+    border-radius: 50%; /* Makes the border circular */
+    display: block; /* Ensures padding is applied correctly */
+    margin: 0 auto; /* Centers the image horizontally, if needed */
 }
+
 
 @media (max-width:600px)
 {
