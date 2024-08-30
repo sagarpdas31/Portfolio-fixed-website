@@ -59,7 +59,7 @@ text-align: justify;
 .codeforces-logo,
 .leetcode-logo,
 .codechef-logo {
-    border: 5px solid yellow; /* Increased border width */
+    border: 5px solid orange; /* Increased border width */
     padding: 10px; /* Added space between the logo and the border */
     border-radius: 50%; /* Makes the border circular */
     display: block; /* Ensures padding is applied correctly */
