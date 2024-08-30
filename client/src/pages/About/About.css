@@ -1,0 +1,91 @@
+
+.about{
+    margin-top: 50px;
+    padding: 20px;
+    margin-left: 150px;
+    border-radius: 4px;
+
+}
+
+.about-img img {
+    width: 400px;
+    height: 400px;
+    border-radius: 4px;
+    border: 1px solid black;
+    transition: transform 0.2s ease; 
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.about-img img:hover {
+    transform: scale(1.05); /* Scale the image by 5% on hover */
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.about-content h1{
+    color: navy;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 2px solid gray;
+   
+}
+
+.about-content p{
+text-align: justify;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#dark .about{
+    box-shadow: none;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+}
+
+#dark .about-content h1 {
+    color: rgb(237, 211, 11);
+}
+
+#grow{
+    margin-top: -20px;
+}
+@media (max-width:600px)
+{
+    .about{
+        margin: 0;
+        padding: 0;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .about-content h1{
+        margin-top: 20px;
+    }
+    .about-content p{
+        padding: 10px;
+    }
+    .about-img img{
+        width: 95%;
+margin-left: 10px;
+    }
+}
+
+.coding-profiles {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-item {
+    margin-top: 20px;
+    
+}
+
+.profile-logo {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}

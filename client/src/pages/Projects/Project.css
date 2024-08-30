@@ -1,0 +1,132 @@
+.project {
+  margin-top: 60px;
+  padding-left: 140px;
+}
+
+.project h2 {
+  color: rgb(8, 180, 8);
+  font-weight: bold;
+}
+
+.project hr {
+  color: #026560;
+  margin: 20px auto;
+}
+
+.card {
+  border: 1px solid rgb(219, 215, 215);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#ads {
+  margin: 30px 0;
+}
+
+#ads .card-notify-badge {
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  background: #f29f67;
+  text-align: center;
+  border-radius: 30px;
+  color: black;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.project .card img {
+  object-fit: cover; /* Ensures the image covers the entire area */
+  height: 220px; /* Adjust the height as needed */
+  width: 100%;
+}
+
+.card-detail-badge {
+  background-color: #e0b50f;
+  text-align: center;
+  border-radius: 30px;
+  color: black;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.card-image-overly {
+  font-size: 20px;
+}
+
+.card-image-overly span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.project .card:hover {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 12px 15px 20px rgba(46, 61, 73, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.ad-btn {
+  text-transform: uppercase;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #138781;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 20px ;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  flex: 1; /* Ensures the buttons take equal space */
+}
+
+.ad-btn:hover {
+  background-color: white;
+  color: #138781;
+  border: 2px solid #138781;
+  box-shadow: 12px 15px 20px rgba(46, 61, 73, 0.15);
+}
+
+.button-row {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+  margin: 0 20px 20px; /* Ensures some spacing around the buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .project {
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .project hr {
+    width: 280px;
+  }
+  
+  .project .card {
+    margin-top: 30px;
+    width: 100%; /* Ensure the card takes full width on small screens */
+  }
+
+  .ad-btn {
+    margin: 5px 0; /* Adjust button margin for smaller screens */
+    padding: 6px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+}
+
+#dark .project h2{
+  color: yellow;
+}
