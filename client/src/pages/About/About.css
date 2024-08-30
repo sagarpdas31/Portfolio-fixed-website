@@ -54,6 +54,20 @@ text-align: justify;
 #grow{
     margin-top: -20px;
 }
+
+/* Specific borders for each logo */
+.codeforces-logo {
+    border: 3px solid yellow;
+}
+
+.leetcode-logo {
+    border: 3px solid yellow;
+}
+
+.codechef-logo {
+    border: 3px solid yellow;
+}
+
 @media (max-width:600px)
 {
     .about{
