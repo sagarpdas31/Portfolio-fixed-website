@@ -8,9 +8,10 @@ const About = () => {
             <Jump>
                 <div className="about" id="about">
                     <div className="row">
-                        <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
-                            <img src="https://drive.google.com/file/d/1IrapLcB3EcUsSdJGWdf__cUTgo0Z3dZv/view?usp=drive_link" />
-                        </div>
+                      <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
+    <img src="https://drive.google.com/uc?export=view&id=1IrapLcB3EcUsSdJGWdf__cUTgo0Z3dZv" alt="About Me" />
+</div>
+
                         <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content p-3" id="grow">
                             <h1 className='text-center'>About Me</h1>
                             <p>
