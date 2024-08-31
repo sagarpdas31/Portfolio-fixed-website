@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { FcHome, FcAbout, FcEngineering, FcVoicePresentation, FcGraduationCap, FcOrgUnit, FcBusinessContact } from 'react-icons/fc';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import profilePic from '../../utils/Photo_1.jpg';
 const Menus = ({ toggle }) => {
     return (
         <>
@@ -11,7 +12,7 @@ const Menus = ({ toggle }) => {
                 <>
                     <Zoom>
                         <div className="navbar-profile-pic">
-                            <img src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/e76d4296-43f3-493b-9d50-f8e5c142d06c/2117667014/boys-profile-picture-screenshot.png" alt="profile Pic" />
+                            <img src={profilePic} alt="profile_pic" />
                         </div>
                     </Zoom>
                     <Fade left>
