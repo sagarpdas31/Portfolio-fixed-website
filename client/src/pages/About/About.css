@@ -72,24 +72,21 @@ text-align: justify;
         margin: 0;
         padding: 0;
         margin-top: 40px;
-        width: 100%;
+        width: 95%;
     }
     .about-content h1 {
-        margin-top: 20px;
+        margin-top: 25px;
     }
     .about-content p {
         padding: 10px;
     }
     .about-img img {
         width: 70%;
-        height: auto;
         margin: 0;
         padding: 0;
         display: block;
     }
 }
-
-
 
 
 .coding-profiles {
