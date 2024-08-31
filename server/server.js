@@ -5,7 +5,7 @@ import connectDB from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import cors from "cors";
 import path from "path";
-import job from "./crone/crone.js";
+import job from "./cron/cron.js";
 
 // Configure environment variables
 dotenv.config();
