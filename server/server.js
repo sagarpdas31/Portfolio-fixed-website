@@ -19,7 +19,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://portfolio-fixed-website.onrender.com','https://portfolio-fixed-website-w69n.onrender.com']
+    origin: ['http://localhost:3000','https://portfolio-fixed-website-w69n.onrender.com']
 }));
 
 // Port
