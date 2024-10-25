@@ -20,7 +20,7 @@ const Contact = () => {
 
         try {
             // Send data to backend API
-            const res = await axios.post("/api/v1/portfolio/sendEmail", {
+            const res = await axios.post("https://portfolio-fixed-website-w69n.onrender.com/api/v1/portfolio/sendEmail", {
                 name,
                 email,
                 message: msg,  
