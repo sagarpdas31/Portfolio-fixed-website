@@ -4,12 +4,11 @@
     width: 100px;
     display: flex;
     vertical-align: middle;
-/*     margin: 0 auto; */
-    margin-top:8px;
+    margin: 0 auto;
     border: 2px solid green;
     border-radius: 50%; 
     object-fit: cover;
-    padding:1px;
+    padding-top:5px;
 }
 
 .nav-items{
