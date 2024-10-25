@@ -4,7 +4,8 @@
     width: 100px;
     display: flex;
     vertical-align: middle;
-    margin: 0 auto;
+/*     margin: 0 auto; */
+    margin-top:8px;
     border: 2px solid green;
     border-radius: 50%; 
     object-fit: cover;
