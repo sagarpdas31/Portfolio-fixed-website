@@ -35,7 +35,7 @@ const Contact = () => {
                 toast.error("Error sending message");
             }
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Request Error:", error.response || error.message);
             toast.error("Something went wrong!");
         }
     };
