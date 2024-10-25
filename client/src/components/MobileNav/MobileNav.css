@@ -14,12 +14,7 @@
   padding: 10px;
 }
 .mobile-nav-image {
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 50%;
-  vertical-align: middle;
+  margin-top:5px;
 }
 
 .mobile-nav-header .mobile-nav-icon {
