@@ -84,8 +84,8 @@ text-align: justify;
     .about-img img {
         width: 100px; 
         height: auto;
-        margin: 0 auto;
-        padding: 0;
+        margin: 4px auto;
+        padding: 3px;
         display: block;
     }
 }
