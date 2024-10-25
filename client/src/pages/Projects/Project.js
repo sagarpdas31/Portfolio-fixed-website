@@ -42,14 +42,14 @@ const Project = () => {
                                         >
                                             Project Link
                                         </a>
-                                        <a
-                                            className="ad-btn"
-                                            href="https://github.com/Sagarkumardas2002/SocilaMediaFinalFixed"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Source code
-                                        </a>
+                                        // <a
+                                        //     className="ad-btn"
+                                        //     href="https://github.com/Sagarkumardas2002/SocilaMediaFinalFixed"
+                                        //     target="_blank"
+                                        //     rel="noopener noreferrer"
+                                        // >
+                                        //     Source code
+                                        // </a>
                                     </div>
                                 </div>
                             </div>
