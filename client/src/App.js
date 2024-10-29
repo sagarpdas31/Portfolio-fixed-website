@@ -16,6 +16,7 @@ import LazyLoad from 'react-lazyload';
 
 function App() {
   const [theme] = useTheme();
+
   return (
     <>
       <div id={theme}>
@@ -24,24 +25,13 @@ function App() {
         <Layout />
 
         <div className="container">
-          <LazyLoad height={200} offset={100}>
-            <About />
-          </LazyLoad>
-          <LazyLoad height={200} offset={100}>
-            <Education />
-          </LazyLoad>
-          <LazyLoad height={200} offset={100}>
-            <Stack />
-          </LazyLoad>
-          <LazyLoad height={200} offset={100}>
-            <Project />
-          </LazyLoad>
-          <LazyLoad height={200} offset={100}>
-            <WorkExp />
-          </LazyLoad>
-          <LazyLoad height={200} offset={100}>
-            <Contact />
-          </LazyLoad>
+          {/* Directly rendering each section without lazy loading */}
+          <About />
+          <Education />
+          <Stack />
+          <Project />
+          <WorkExp />
+          <Contact />
         </div>
 
         <Tada>
@@ -50,6 +40,7 @@ function App() {
           </div>
         </Tada>
       </div>
+
       <ScrollToTop
         smooth
         color="white"
