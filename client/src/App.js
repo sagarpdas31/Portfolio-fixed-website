@@ -12,6 +12,8 @@ import Tada from "react-reveal/Tada"
 import MobileNav from "./components/MobileNav/MobileNav";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LazyLoad from 'react-lazyload';
+
 function App() {
   const [theme] = useTheme();
   return (
@@ -22,13 +24,26 @@ function App() {
         <Layout />
 
         <div className="container">
-          <About />
-          <Education />
-          <Stack />
-          <Project />
-          <WorkExp />
-          <Contact />
+          <LazyLoad height={200} offset={100}>
+            <About />
+          </LazyLoad>
+          <LazyLoad height={200} offset={100}>
+            <Education />
+          </LazyLoad>
+          <LazyLoad height={200} offset={100}>
+            <Stack />
+          </LazyLoad>
+          <LazyLoad height={200} offset={100}>
+            <Project />
+          </LazyLoad>
+          <LazyLoad height={200} offset={100}>
+            <WorkExp />
+          </LazyLoad>
+          <LazyLoad height={200} offset={100}>
+            <Contact />
+          </LazyLoad>
         </div>
+
         <Tada>
           <div className="footer pb-3 ms-3 mb-12">
             <h4 className="text-center mb-10">Designed By 😍 SAGAR KUMAR DAS &copy; 2024</h4>
@@ -40,7 +55,6 @@ function App() {
         color="white"
         style={{ backgroundColor: "#1e1e2c", borderRadius: "80px" }}
       />
-
     </>
   );
 }
