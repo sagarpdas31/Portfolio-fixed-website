@@ -5,14 +5,14 @@ import connectDB from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import cors from "cors";
 import path from "path";
-//import job from "./cron/cron.js";
+import job from "./cron/cron.js";
 
 // Configure environment variables
 dotenv.config();
 
 // Connect to MongoDB
 connectDB();
-//job.start();
+job.start();
 
 // Initialize express
 const app = express();
