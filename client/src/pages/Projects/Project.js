@@ -36,7 +36,7 @@ const Project = () => {
                                     <div className="button-row">
                                         <a
                                             className="ad-btn"
-                                            href="https://socilamediafinalfixed.onrender.com/chat"
+                                            href="https://socilamediafinalfixed-9iof.onrender.com/chat"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
