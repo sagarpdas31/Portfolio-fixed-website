@@ -57,12 +57,13 @@ import Fade from 'react-reveal/Fade';
 
 const Home = () => {
     const [theme, setTheme] = useTheme();
-
+    const [isLoading, setIsLoading] = useState(true);
+    
     // Define loading states for individual elements
     const [showHeading, setShowHeading] = useState(false);
     const [showTypewriter, setShowTypewriter] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
-
+    
     // Toggle theme
     const handleTheme = () => {
         setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
@@ -86,43 +87,47 @@ const Home = () => {
     return (
         <div className="container-fluid home-container" id="home">
             <div className="theme-btn" onClick={handleTheme}>
-                {theme === "light" ? (
-                    <BsFillMoonStarsFill size={30} />
-                ) : (
-                    <BsFillSunFill size={30} />
-                )}
+                {theme === "light" ? <BsFillMoonStarsFill size={30} /> : <BsFillSunFill size={30} />}
             </div>
-
+            
             <div className="container home-content">
+                {isLoading && <div className="shimmer-overlay"></div>}
+                
                 {/* Fade in heading */}
                 {showHeading && (
-                    <h2 className="fade-in-left">Hi, I'm Sagar</h2>
+                    <Fade left>
+                        <h2 className="fade-in-left">Hi, I'm Sagar</h2>
+                    </Fade>
                 )}
                 
                 {/* Fade in typewriter text */}
                 {showTypewriter && (
-                    <h1 className="fade-in-left">
-                        <Typewriter
-                            options={{
-                                strings: [
-                                    "Full Stack Developer!",
-                                    "MERN Stack Developer!",
-                                    "Data Structure & Algorithms!",
-                                    "C++!"
-                                ],
-                                autoStart: true,
-                                loop: true
-                            }}
-                        />
-                    </h1>
+                    <Fade left>
+                        <h1 className="fade-in-left">
+                            <Typewriter
+                                options={{
+                                    strings: [
+                                        "Full Stack Developer!",
+                                        "MERN Stack Developer!",
+                                        "Data Structure & Algorithms!",
+                                        "C++!"
+                                    ],
+                                    autoStart: true,
+                                    loop: true
+                                }}
+                            />
+                        </h1>
+                    </Fade>
                 )}
                 
                 {/* Fade in buttons */}
                 {showButtons && (
-                    <div className="home-buttons fade-in-left">
-                        <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' target='_blank' rel='noreferrer'>Hire Me</a>
-                        <a className='btn btn-cv' href={resumeUrl} target='_blank' rel="noopener noreferrer">My Resume</a>
-                    </div>
+                    <Fade left>
+                        <div className="home-buttons fade-in-left">
+                            <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' target='_blank' rel='noreferrer'>Hire Me</a>
+                            <a className='btn btn-cv' href={resumeUrl} target='_blank' rel="noopener noreferrer">My Resume</a>
+                        </div>
+                    </Fade>
                 )}
             </div>
         </div>
