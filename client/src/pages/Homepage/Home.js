@@ -48,6 +48,8 @@
 // }
 
 // export default Home
+
+
 import React, { useState, useEffect } from 'react';
 import Typewriter from "typewriter-effect";
 import './home.css';
@@ -55,79 +57,53 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useTheme } from '../../Context/ThemeContext';
 import Fade from 'react-reveal/Fade';
 
+// Import Skeleton Loader
+import SkeletonLoader from './SkeletonLoader';
+
 const Home = () => {
     const [theme, setTheme] = useTheme();
     const [isLoading, setIsLoading] = useState(true);
     
-    // Define loading states for individual elements
-    const [showHeading, setShowHeading] = useState(false);
-    const [showTypewriter, setShowTypewriter] = useState(false);
-    const [showButtons, setShowButtons] = useState(false);
-    
-    // Toggle theme
-    const handleTheme = () => {
-        setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
-    };
-
     // Sequential loading of each element
     useEffect(() => {
-        const headingTimer = setTimeout(() => setShowHeading(true), 500);
-        const typewriterTimer = setTimeout(() => setShowTypewriter(true), 1000);
-        const buttonsTimer = setTimeout(() => setShowButtons(true), 1500);
-
-        return () => {
-            clearTimeout(headingTimer);
-            clearTimeout(typewriterTimer);
-            clearTimeout(buttonsTimer);
-        };
+        const timer = setTimeout(() => setIsLoading(false), 2000); // Adjust duration as needed
+        return () => clearTimeout(timer);
     }, []);
 
     const resumeUrl = 'https://drive.google.com/file/d/1fWpqxJBehKwG-NwtsaehZU9yQjgsCgjd/view?usp=drive_link';
 
     return (
         <div className="container-fluid home-container" id="home">
-            <div className="theme-btn" onClick={handleTheme}>
+            <div className="theme-btn" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
                 {theme === "light" ? <BsFillMoonStarsFill size={30} /> : <BsFillSunFill size={30} />}
             </div>
-            
+
             <div className="container home-content">
-                {isLoading && <div className="shimmer-overlay"></div>}
-                
-                {/* Fade in heading */}
-                {showHeading && (
-                    <Fade left>
-                        <h2 className="fade-in-left">Hi, I'm Sagar</h2>
-                    </Fade>
-                )}
-                
-                {/* Fade in typewriter text */}
-                {showTypewriter && (
-                    <Fade left>
-                        <h1 className="fade-in-left">
-                            <Typewriter
-                                options={{
-                                    strings: [
-                                        "Full Stack Developer!",
-                                        "MERN Stack Developer!",
-                                        "Data Structure & Algorithms!",
-                                        "C++!"
-                                    ],
-                                    autoStart: true,
-                                    loop: true
-                                }}
-                            />
-                        </h1>
-                    </Fade>
-                )}
-                
-                {/* Fade in buttons */}
-                {showButtons && (
-                    <Fade left>
-                        <div className="home-buttons fade-in-left">
-                            <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' target='_blank' rel='noreferrer'>Hire Me</a>
-                            <a className='btn btn-cv' href={resumeUrl} target='_blank' rel="noopener noreferrer">My Resume</a>
-                        </div>
-                    </Fade>
+                {isLoading ? (
+                    <SkeletonLoader />
+                ) : (
+                    <>
+                        <Fade left>
+                            <h2>Hi, I'm Sagar</h2>
+                        </Fade>
+                        <Fade left>
+                            <h1>
+                                <Typewriter
+                                    options={{
+                                        strings: ["Full Stack Developer!", "MERN Stack Developer!", "Data Structure & Algorithms!", "C++!"],
+                                        autoStart: true,
+                                        loop: true
+                                    }}
+                                />
+                            </h1>
+                        </Fade>
+                        <Fade left>
+                            <div className="home-buttons">
+                                <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' target='_blank' rel='noreferrer'>Hire Me</a>
+                                <a className='btn btn-cv' href={resumeUrl} target='_blank' rel="noopener noreferrer">My Resume</a>
+                            </div>
+                        </Fade>
+                    </>
                 )}
             </div>
         </div>
