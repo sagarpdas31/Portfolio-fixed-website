@@ -68,7 +68,7 @@ const Project = () => {
                                     <div className="button-row">
                                         <a
                                             className="ad-btn"
-                                            href="https://ecom-final-fixed.vercel.app/"
+                                            href="https://sagar-das-ecom-project.vercel.app/    "
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -167,7 +167,7 @@ const Project = () => {
                                     <div className="button-row">
                                         <a
                                             className="ad-btn"
-                                            href="https://portfolio-fixed-website.onrender.com"
+                                            href="https://portfolio-fixed-website-w69n.onrender.com/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
