@@ -1,4 +1,3 @@
-correct this 
 import { BsBootstrap, BsFiletypeCss, BsFiletypeHtml } from "react-icons/bs";
 import { CgCPlusPlus } from "react-icons/cg";
 import { DiPython } from "react-icons/di";
@@ -14,11 +13,6 @@ import {
     SiGithub,
     SiFirebase,
     SiExpress,
-    SiJava,
-    SiTypescript,
-    SiDesign Patterns,
-    SiSystemDesign,
-
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -30,7 +24,7 @@ export const TechStackList = [
     },
     {
         _id: 2,
-        name: "CSS",
+        name: "CSS / SCSS",
         icon: BsFiletypeCss,
     },
     {
@@ -102,11 +96,6 @@ export const TechStackList = [
     {
         _id: 17,
         name: "C++ ",
-        icon: CgCPlusPlus,
-    },
-  {
-        _id: 18,
-        name: "Java",
         icon: CgCPlusPlus,
     },
 
