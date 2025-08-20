@@ -14,7 +14,6 @@ import {
   SiFirebase,
   SiExpress,
   SiJava,
-  SiTypescript,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
