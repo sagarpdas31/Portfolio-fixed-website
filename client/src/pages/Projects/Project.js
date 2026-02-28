@@ -117,7 +117,7 @@ const Project = () => {
                             <div className="card rounded">
                                 <div className="card-image">
                                     <img
-                                        src="https://socialwall.me/en/wp-content/uploads/2017/12/social-wall-card.png"
+                                        src="https://drive.google.com/file/d/1189wJHBgCBFjNk_C9xky3W5nu2fEDzB3/view?usp=drive_link"
                                         alt="project6"
                                     />
                                 </div>
@@ -183,7 +183,7 @@ const Project = () => {
                             <div className="card rounded">
                                 <div className="card-image">
                                     <img
-                                        src="https://rishihood.edu.in/wp-content/uploads/2021/11/16-1.png"
+                                        src="https://drive.google.com/file/d/16Y1Zg3l_jVp5Af-z6cS57uHcsWR8g5KT/view?usp=sharing"
                                         alt="project5"
                                     />
                                 </div>
