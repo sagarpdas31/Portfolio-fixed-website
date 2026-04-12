@@ -24,9 +24,9 @@ const Education = () => {
                         icon={<MdSchool />}
                     >
                         <h3 className="vertical-timeline-element-title">Baechlor of Technology</h3>
-                        <h5 className="vertical-timeline-element-subtitle">
+                        <p className="vertical-timeline-element-subtitle">
                             Indian Institute of Information Technology Ranchi (Jharkhand)
-                        </h5>
+                        </p>
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work edu "
@@ -37,9 +37,23 @@ const Education = () => {
                         icon={<MdSchool />}
                     >
                         <h3 className="vertical-timeline-element-title">Intermediate of Science</h3>
-                        <h5 className="vertical-timeline-element-subtitle">
+                        <p className="vertical-timeline-element-subtitle">
                             GSIM Korrah Hazaribag
-                        </h5>
+                        </p>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--work edu "
+                        contentStyle={{ background: "white", color: "black" }}
+                        contentArrowStyle={{ borderRight: "7px solid  white" }}
+                        date="2018 - 2020"
+                        iconStyle={{ background: "#138781", color: "#fff" }}
+                        icon={<MdSchool />}
+                    >
+                        <h3 className="vertical-timeline-element-title">Secondary School</h3>
+                        <p className="vertical-timeline-element-subtitle">
+                            S V N Resi, High School Bagodar
+                        </p>
                     </VerticalTimelineElement>
 
                 </VerticalTimeline>
