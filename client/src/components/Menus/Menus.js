@@ -222,7 +222,7 @@ import { Link } from "react-scroll";
 import { FcHome, FcAbout, FcEngineering, FcVoicePresentation, FcGraduationCap, FcOrgUnit, FcBusinessContact, FcDiploma1 } from 'react-icons/fc';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-import profilePic from '../../utils/Photo_1.jpg';
+import profilePic from '../../utils/photo.jpg';
 
 const Menus = ({ toggle }) => {
     return (
