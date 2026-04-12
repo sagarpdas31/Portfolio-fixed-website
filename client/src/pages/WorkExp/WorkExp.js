@@ -57,7 +57,7 @@ const WorkExp = () => {
                             <li>API Development & Integration</li>
                             <li>API Testing (Postman)</li>
                             <li>Database Management (MongoDB & MySql/SQL)</li>
-                            <li> cloud Services: AWS(S3,EC2,Lambda)
+                            <li> cloud Services: AWS(S3,EC2,Lambda)</li>
                             <li>Code Testing & Debugging(Jira, VsCode, Chrome DevTools)</li>
                         </ul>
                     </VerticalTimelineElement>
