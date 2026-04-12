@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import Jump from 'react-reveal/Jump';
-import profilePic from '../../utils/Photo_1.jpg';
+import profilePic from '../../utils/photo.jpg';
 const About = () => {
     return (
         <>
@@ -14,19 +14,19 @@ const About = () => {
                         <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content p-3" id="grow">
                             <h1 className='text-center'>About Me</h1>
                            <p>
-  I am <strong style={{ color: '#138781' }}>SAGAR KUMAR DAS</strong> a 2025 passout Computer Science and Engineering graduate form 
-  <strong style={{ color: '#138781' }}> INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RANCHI</strong> with a passion for full-stack web development and 
-  <strong style={{ color: '#138781' }}> MERN technologies.</strong>  
-
-  Driven by a love for learning, I excel at solving real-life problems through innovative projects, continually enhancing my skills in web technologies along with good hold in  
-  <strong style={{ color: '#138781' }}> Data Structures and Algorithms (DSA)</strong> and competitive programming. 
-
-  My commitment to mastering computer science fundamentals empowers me to tackle complex challenges with creative solutions.
-
-  As a proactive learner, I expand my expertise in development, problem-solving, team leading and staying updated on the latest tech advancements. A collaborative team player who values community, I am always ready to assist others. 
-
-  My goal is to create impactful software solutions that deliver tangible benefits. With a blend of diligence and adaptability, I am dedicated to excellence and innovation, eager to contribute to meaningful projects and grow as a versatile engineering professional.
-</p>
+                              I am <strong style={{ color: '#138781' }}>SAGAR KUMAR DAS</strong> a 2025 passout Computer Science and Engineering graduate form 
+                              <strong style={{ color: '#138781' }}> INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RANCHI</strong> with a passion for full-stack web development and 
+                              <strong style={{ color: '#138781' }}> MERN technologies.</strong>  
+                            
+                              Driven by a love for learning, I excel at solving real-life problems through innovative projects, continually enhancing my skills in web technologies along with good hold in  
+                              <strong style={{ color: '#138781' }}> Data Structures and Algorithms (DSA)</strong> and competitive programming. 
+                            
+                              My commitment to mastering computer science fundamentals empowers me to tackle complex challenges with creative solutions.
+                            
+                              As a proactive learner, I expand my expertise in development, problem-solving, team leading and staying updated on the latest tech advancements. A collaborative team player who values community, I am always ready to assist others. 
+                            
+                              My goal is to create impactful software solutions that deliver tangible benefits. With a blend of diligence and adaptability, I am dedicated to excellence and innovation, eager to contribute to meaningful projects and grow as a versatile engineering professional.
+                        </p>
                         </div>
                     </div>
                     <div className="row coding-profiles">
