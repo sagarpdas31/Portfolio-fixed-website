@@ -7,6 +7,7 @@ import Education from './pages/Educaton/Education';
 import Project from './pages/Projects/Project';
 import Stack from './pages/Techstacks/Stack';
 import WorkExp from './pages/WorkExp/WorkExp';
+import Certificates from './pages/Certificates/Certificates;
 import { useTheme } from "./Context/ThemeContext";
 import Tada from "react-reveal/Tada"
 import MobileNav from "./components/MobileNav/MobileNav";
