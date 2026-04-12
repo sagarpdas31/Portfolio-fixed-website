@@ -7,17 +7,16 @@ import Education from './pages/Educaton/Education';
 import Project from './pages/Projects/Project';
 import Stack from './pages/Techstacks/Stack';
 import WorkExp from './pages/WorkExp/WorkExp';
-import Certificates from './pages/Certificates/Certificates';
+import Certificates from "./pages/Certificates/Certificates";
 import { useTheme } from "./Context/ThemeContext";
 import Tada from "react-reveal/Tada"
 import MobileNav from "./components/MobileNav/MobileNav";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LazyLoad from 'react-lazyload';
 
 function App() {
   const [theme] = useTheme();
-
+  const year = new Date().getFullYear();
   return (
     <>
       <div id={theme}>
@@ -32,12 +31,15 @@ function App() {
           <Stack />
           <Project />
           <WorkExp />
+          <Certificates />
           <Contact />
         </div>
 
         <Tada>
           <div className="footer pb-3 ms-3 mb-12">
-            <h4 className="text-center mb-10">Designed By 😍 SAGAR KUMAR DAS &copy; 2026</h4>
+            <h4 className="text-center mb-10">
+              Designed By 😍 SAGAR KUMAR DAS &copy; {year}
+            </h4>
           </div>
         </Tada>
       </div>

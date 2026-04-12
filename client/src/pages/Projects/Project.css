@@ -65,7 +65,7 @@
 }
 
 .project .card:hover {
-  background-color: white;
+ background-color: rgb(236, 199, 195);
   border-radius: 8px;
   box-shadow: 12px 15px 20px rgba(46, 61, 73, 0.15);
   transition: box-shadow 0.3s ease;

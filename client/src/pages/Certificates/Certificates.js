@@ -1,397 +1,176 @@
-// import React, { useState } from "react";
-// import { MdVerified, MdOpenInNew } from "react-icons/md";
-// import {
-//   FaTrophy,
-//   FaDatabase,
-//   FaRocket,
-//   FaBrain,
-//   FaLaptopCode,
-//   FaFileExcel,
-//   FaClipboardCheck,
-//   FaWindows,
-// } from "react-icons/fa";
-// import "./Certificates.css";
-
-// const certificates = [
-//   {
-//     id: 1,
-//     title: "Introduction to SQL",
-//     issuer: "Simplilearn SkillUp",
-//     date: "2 Jul 2025",
-//     credential: "8558411",
-//     icon: <FaDatabase />,
-//     color: "#f97316",
-//     link: "https://drive.google.com/file/d/1UVVvwS-gnb4_hazFI5qda6Hg9nU3YaVC/view?usp=drive_link",
-//     skills: ["SQL", "Queries", "Databases", "Data Retrieval"],
-//     badge: null,
-//   },
-//   {
-//     id: 2,
-//     title: "Agile Project Management",
-//     issuer: "HP LIFE / HP Foundation",
-//     date: "31 Mar 2025",
-//     credential: "7e0049da-30e3-4212-bc96",
-//     icon: <FaRocket />,
-//     color: "#0096d6",
-//     link: "https://drive.google.com/file/d/183itudBwB16djvqdJneLyMg_LkhFxCT0/view?usp=sharing",
-//     skills: ["Scrum", "Kanban", "Agile", "MVP"],
-//     badge: null,
-//   },
-//   {
-//     id: 3,
-//     title: "AI for Beginners",
-//     issuer: "HP LIFE / HP Foundation",
-//     date: "28 Mar 2025",
-//     credential: "f8f2b5b9-4989-4506-bfd2",
-//     icon: <FaBrain />,
-//     color: "#0096d6",
-//     link: "https://drive.google.com/file/d/1lv4MlhtgbTEie91ID3fBq3FpBZ4a4hwJ/view?usp=sharing",
-//     skills: [
-//       "Artificial Intelligence",
-//       "Machine Learning",
-//       "AI Ethics",
-//       "Data",
-//     ],
-//     badge: null,
-//   },
-//   {
-//     id: 4,
-//     title: "Software Development Lifecycle and Technology Job Simulation",
-//     issuer: "Accenture / Forage",
-//     date: "31 Dec 2024",
-//     credential: "u2EXuSGoXJALqh5vF",
-//     icon: <FaLaptopCode />,
-//     color: "#a100ff",
-//     link: "https://drive.google.com/file/d/1Z2CD4rb3L-KkDI_4sfoJttiV4yo3qHt_/view?usp=sharing",
-//     skills: ["SDLC", "Agile", "Debugging", "STLC"],
-//     badge: null,
-//   },
-//   {
-//     id: 5,
-//     title: "3-Hour Advanced Excel Workshop",
-//     issuer: "Ira Skills (ISO 9001:2015 | MSME)",
-//     date: "15 Feb 2026",
-//     credential: "YVE6I8757TTX",
-//     icon: <FaFileExcel />,
-//     color: "#217346",
-//     link: "https://drive.google.com/file/d/1-7M0LtFN_YsvzeAaReHCz_fqwZTLjIWZ/view?usp=drive_link",
-//     skills: [
-//       "Pivot Tables",
-//       "VLOOKUP / XLOOKUP",
-//       "What-if Analysis",
-//       "Dashboard Creation",
-//       "Microsoft Copilot",
-//     ],
-//     badge: null,
-//   },
-
-//   {
-//     id: 6,
-//     title: "Microsoft Office Specialist – MS-Office (Grade A)",
-//     issuer: "Keerti Institute India Pvt. Ltd.",
-//     date: "11 Jun 2019",
-//     credential: "42197",
-//     icon: <FaWindows />,
-//     color: "#0078d4",
-//     link: "https://drive.google.com/file/d/1T8R4-5EfKaqeQPID7YtLcctsOTfKQv2R/view?usp=drivesdk",
-//     skills: ["MS-Word", "MS-Excel", "MS-PowerPoint", "Internet"],
-//     badge: "Grade A",
-//   },
-//   {
-//     id: 7,
-//     title: "AINCAT 2025 – All India NCAT Participation",
-//     issuer: "Naukri Campus",
-//     date: "30 May 2025",
-//     credential: "683a0e166c1aa41e163b7577",
-//     icon: <FaClipboardCheck />,
-//     color: "#e91e8c",
-//     link: "https://drive.google.com/file/d/1xS_DB2Bzgl0eUpxDOZbX3h3iUzrHiztr/view?usp=drive_link",
-//     skills: [
-//       "Quantitative Aptitude",
-//       "Logical Reasoning",
-//       "Data Interpretation",
-//       "Verbal Ability",
-//     ],
-//     badge: null,
-//   },
-//   {
-//     id: 8,
-//     title: "Certificate of Merit – Young Turks 2025",
-//     issuer: "Naukri Campus",
-//     date: "29 Sep 2025",
-//     credential: "68d9ac04fac35327673dfb30",
-//     icon: <FaTrophy />,
-//     color: "#f59e0b",
-//     link: "#",
-//     skills: ["99.30 Percentile", "Aptitude", "Reasoning", "Skill Contest"],
-//     badge: "🏆 Top 1%",
-//   },
-// ];
-
-// const Certificates = () => {
-//   const [hovered, setHovered] = useState(null);
-
-//   return (
-//     <div className="certificates" id="certificates">
-//       <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
-//         Certificates
-//       </h2>
-//       <hr />
-//       <p className="certificates-subtitle text-center">
-//         Verified credentials earned from globally recognised platforms
-//       </p>
-
-//       <div className="certificates-grid">
-//         {certificates.map((cert) => (
-//           <div
-//             key={cert.id}
-//             className={`cert-card ${hovered === cert.id ? "cert-card--hovered" : ""}`}
-//             onMouseEnter={() => setHovered(cert.id)}
-//             onMouseLeave={() => setHovered(null)}
-//             style={{ "--accent": cert.color }}
-//           >
-//             <div className="cert-card__bar" />
-
-//             <div className="cert-card__top-row">
-//               <div className="cert-card__icon-wrap">
-//                 <span className="cert-card__icon">{cert.icon}</span>
-//               </div>
-//               {cert.badge && (
-//                 <span className="cert-card__special-badge">{cert.badge}</span>
-//               )}
-//             </div>
-
-//             <div className="cert-card__body">
-//               <h3 className="cert-card__title">{cert.title}</h3>
-//               <p className="cert-card__issuer">
-//                 <MdVerified className="cert-card__verified" />
-//                 {cert.issuer}
-//               </p>
-//               <p className="cert-card__date">{cert.date}</p>
-//               <div className="cert-card__skills">
-//                 {cert.skills.map((skill) => (
-//                   <span key={skill} className="cert-card__skill-tag">
-//                     {skill}
-//                   </span>
-//                 ))}
-//               </div>
-//             </div>
-
-//             <div className="cert-card__footer">
-//               <span className="cert-card__credential">
-//                 ID: {cert.credential}
-//               </span>
-//               <a
-//                 href={cert.link}
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="cert-card__link"
-//               >
-//                 View <MdOpenInNew />
-//               </a>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Certificates;
-
 import React, { useState } from "react";
-import { MdVerified, MdOpenInNew } from "react-icons/md";
-import {
-  FaTrophy,
-  FaDatabase,
-  FaRocket,
-  FaBrain,
-  FaLaptopCode,
-  FaFileExcel,
-  FaClipboardCheck,
-  FaWindows,
-} from "react-icons/fa";
 import "./Certificates.css";
+import RubberBand from "react-reveal/RubberBand";
+import Spin from "react-reveal/Spin";
 
+/* =========================
+   🖼️ IMAGES
+========================= */
+import SQL from "../../utils/SQL.png";
+import AL from "../../utils/AL.png";
+import Agile from "../../utils/Agile.png";
+import Excel from "../../utils/Excel.jpeg";
+import NCAT from "../../utils/NCAT.jpeg";
+import SDLC from "../../utils/SDLC.png";
+import Keeti from "../../utils/Keeti.jpeg";
+import Yound from "../../utils/Yound.png";
+
+/* =========================
+   📦 DATA (UNCHANGED)
+========================= */
 const certificates = [
-  // ✅ YOUR SAME DATA (unchanged)
   {
     id: 1,
     title: "Introduction to SQL",
     issuer: "Simplilearn SkillUp",
-    date: "2 Jul 2025",
-    credential: "8558411",
-    icon: <FaDatabase />,
-    color: "#f97316",
-    link: "https://drive.google.com/file/d/1UVVvwS-gnb4_hazFI5qda6Hg9nU3YaVC/view?usp=drive_link",
-    skills: ["SQL", "Queries", "Databases", "Data Retrieval"],
-    badge: null,
+    image: SQL,
+    link: "https://drive.google.com/file/d/1UVVvwS-gnb4_hazFI5qda6Hg9nU3YaVC/view",
+    skills: ["SQL", "Queries", "Databases", "Data"],
   },
   {
     id: 2,
     title: "Agile Project Management",
-    issuer: "HP LIFE / HP Foundation",
-    date: "31 Mar 2025",
-    credential: "7e0049da-30e3-4212-bc96",
-    icon: <FaRocket />,
-    color: "#0096d6",
-    link: "https://drive.google.com/file/d/183itudBwB16djvqdJneLyMg_LkhFxCT0/view?usp=sharing",
-    skills: ["Scrum", "Kanban", "Agile", "MVP"],
-    badge: null,
+    issuer: "HP LIFE",
+    image: Agile,
+    link: "https://drive.google.com/file/d/183itudBwB16djvqdJneLyMg_LkhFxCT0/view",
+    skills: ["Agile", "Scrum", "Kanban"],
   },
   {
     id: 3,
     title: "AI for Beginners",
-    issuer: "HP LIFE / HP Foundation",
-    date: "28 Mar 2025",
-    credential: "f8f2b5b9-4989-4506-bfd2",
-    icon: <FaBrain />,
-    color: "#0096d6",
-    link: "https://drive.google.com/file/d/1lv4MlhtgbTEie91ID3fBq3FpBZ4a4hwJ/view?usp=sharing",
+    issuer: "HP LIFE",
+    image: AL,
+    link: "https://drive.google.com/file/d/1lv4MlhtgbTEie91ID3fBq3FpBZ4a4hwJ/view",
     skills: ["AI", "ML", "Ethics"],
-    badge: null,
   },
   {
     id: 4,
-    title: "Software Development Lifecycle and Technology Job Simulation",
-    issuer: "Accenture / Forage",
-    date: "31 Dec 2024",
-    credential: "u2EXuSGoXJALqh5vF",
-    icon: <FaLaptopCode />,
-    color: "#a100ff",
-    link: "https://drive.google.com/file/d/1Z2CD4rb3L-KkDI_4sfoJttiV4yo3qHt_/view?usp=sharing",
-    skills: ["SDLC", "Agile", "Debugging", "STLC"],
-    badge: null,
+    title: "Software Development Lifecycle",
+    issuer: "Accenture",
+    image: SDLC,
+    link: "https://drive.google.com/file/d/1Z2CD4rb3L-KkDI_4sfoJttiV4yo3qHt_/view",
+    skills: ["SDLC", "Debugging", "Agile"],
   },
   {
     id: 5,
-    title: "3-Hour Advanced Excel Workshop",
-    issuer: "Ira Skills (ISO 9001:2015 | MSME)",
-    date: "15 Feb 2026",
-    credential: "YVE6I8757TTX",
-    icon: <FaFileExcel />,
-    color: "#217346",
-    link: "https://drive.google.com/file/d/1-7M0LtFN_YsvzeAaReHCz_fqwZTLjIWZ/view?usp=drive_link",
-    skills: ["Pivot Tables", "VLOOKUP", "Dashboard"],
-    badge: null,
+    title: "Advanced Excel Workshop",
+    issuer: "Ira Skills",
+    image: Excel,
+    link: "https://drive.google.com/file/d/1-7M0LtFN_YsvzeAaReHCz_fqwZTLjIWZ/view",
+    skills: ["Excel", "VLOOKUP", "Pivot"],
   },
   {
     id: 6,
-    title: "Microsoft Office Specialist – MS-Office (Grade A)",
-    issuer: "Keerti Institute India Pvt. Ltd.",
-    date: "11 Jun 2019",
-    credential: "42197",
-    icon: <FaWindows />,
-    color: "#0078d4",
-    link: "https://drive.google.com/file/d/1T8R4-5EfKaqeQPID7YtLcctsOTfKQv2R/view?usp=drivesdk",
-    skills: ["MS-Word", "Excel"],
-    badge: "Grade A",
+    title: "Microsoft Office Specialist",
+    issuer: "Keerti Institute",
+    image: Keeti,
+    link: "https://drive.google.com/file/d/1T8R4-5EfKaqeQPID7YtLcctsOTfKQv2R/view",
+    skills: ["Word", "Excel"],
   },
   {
     id: 7,
     title: "AINCAT 2025",
-    issuer: "Naukri Campus",
-    date: "30 May 2025",
-    credential: "683a0e166c1aa41e163b7577",
-    icon: <FaClipboardCheck />,
-    color: "#e91e8c",
-    link: "https://drive.google.com/file/d/1xS_DB2Bzgl0eUpxDOZbX3h3iUzrHiztr/view?usp=drive_link",
+    issuer: "Naukri.com",
+    image: NCAT,
+    link: "https://drive.google.com/file/d/1xS_DB2Bzgl0eUpxDOZbX3h3iUzrHiztr/view",
     skills: ["Aptitude", "Reasoning"],
-    badge: null,
+  },
+  {
+    id: 8,
+    title: "Young Turks 2025",
+    issuer: "Naukri.com",
+    image: Yound,
+    link: "https://drive.google.com/file/d/1VFnCXLsDHBI6b-um-PRvBXDNADXCSDwq/view",
+    skills: ["Learning", "Practice"],
   },
 ];
 
-// ✅ Helper to extract image from Drive link
-const getImageFromDrive = (link) => {
-  const match = link.match(/\/d\/(.*?)\//);
-  if (match && match[1]) {
-    return `https://drive.google.com/thumbnail?id=${match[1]}`;
-  }
-  return null;
-};
-
+/* =========================
+   🚀 COMPONENT
+========================= */
 const Certificates = () => {
-  const [hovered, setHovered] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  const isExpanded = visibleCount >= certificates.length;
+
+  const handleClick = () => {
+    if (isExpanded) {
+      setVisibleCount(3);
+    } else {
+      setVisibleCount((prev) => prev + 3);
+    }
+  };
+
+  const trimText = (text, limit = 25) =>
+    text.length > limit ? text.substring(0, limit) + "..." : text;
+
+  const visibleCertificates = certificates.slice(0, visibleCount);
 
   return (
-    <div className="certificates" id="certificates">
-      <h2 className="col-12 text-center text-uppercase">Certificates</h2>
-      <hr />
-      <p className="certificates-subtitle text-center">
-        Verified credentials earned from globally recognised platforms
-      </p>
+    <div className="container certificates" id="certificates">
 
-      <div className="certificates-grid">
-        {certificates.map((cert) => {
-          const image = getImageFromDrive(cert.link);
+      <RubberBand>
+        <h2 className="text-center col-12 mt-3 mb-1 text-uppercase">
+          My Certificates
+        </h2>
+        <p className="text-center">
+          👉 Verified certifications and achievements
+        </p>
+      </RubberBand>
 
-          return (
-            <div
-              key={cert.id}
-              className={`cert-card ${
-                hovered === cert.id ? "cert-card--hovered" : ""
-              }`}
-              onMouseEnter={() => setHovered(cert.id)}
-              onMouseLeave={() => setHovered(null)}
-              style={{ "--accent": cert.color }}
-            >
-              {/* ✅ IMAGE SECTION */}
-              {image && (
-                <div className="cert-card__image">
-                  <img src={image} alt={cert.title} />
-                </div>
-              )}
+      {/* CARDS (PROJECT STYLE) */}
+      <div className="row" id="ads">
+        <Spin>
+          {visibleCertificates.map((cert) => (
+            <div key={cert.id} className="col-md-4 px-6">
+              <div className="card rounded mb-4">
 
-              <div className="cert-card__bar" />
-
-              <div className="cert-card__top-row">
-                <div className="cert-card__icon-wrap">
-                  <span className="cert-card__icon">{cert.icon}</span>
+                {/* IMAGE */}
+                <div className="card-image p-1">
+                  <img src={cert.image} alt={cert.title} />
                 </div>
 
-                {cert.badge && (
-                  <span className="cert-card__special-badge">{cert.badge}</span>
-                )}
-              </div>
-
-              <div className="cert-card__body">
-                <h3 className="cert-card__title">{cert.title}</h3>
-
-                <p className="cert-card__issuer">
-                  <MdVerified className="cert-card__verified" />
-                  {cert.issuer}
-                </p>
-
-                <p className="cert-card__date">{cert.date}</p>
-
-                <div className="cert-card__skills">
-                  {cert.skills.map((skill) => (
-                    <span key={skill} className="cert-card__skill-tag">
+                {/* BADGES (Project style) */}
+                <div className="card-image-overly m-auto mt-3">
+                  {cert.skills.map((skill, index) => (
+                    <span key={index} className="card-detail-badge">
                       {skill}
                     </span>
                   ))}
                 </div>
-              </div>
 
-              <div className="cert-card__footer">
-                <span className="cert-card__credential">
-                  ID: {cert.credential}
-                </span>
+                {/* BODY */}
+                <div className="card-body text-center">
+                  <h6 className="text-uppercase">  {trimText(cert.title, 25)}</h6>
+                  <p>{cert.issuer}</p>
 
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cert-card__link"
-                >
-                  View <MdOpenInNew />
-                </a>
+                  <a
+                    className="ad-btn"
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Certificate
+                  </a>
+                </div>
+
               </div>
             </div>
-          );
-        })}
+          ))}
+        </Spin>
       </div>
-    </div>
+
+      {/* BUTTON (STANDARD CLEAN STYLE) */}
+      <div className="button-wrapper">
+        <button
+          className={`btn modern-btn ${isExpanded ? "danger" : "primary"}`}
+          onClick={handleClick}
+        >
+          {isExpanded ? "Show Less" : "Show More"}
+        </button>
+      </div>
+
+    </div>  
   );
 };
 

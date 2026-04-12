@@ -1,289 +1,101 @@
-/* ========================================
-   CERTIFICATES SECTION
-   ======================================== */
-
 .certificates {
-  padding: 100px 0px;
-  margin: 50px 0px;
-  margin-left: 150px;
-  background-color: #1387812a;
+  margin-top: 60px;
+  padding-left: 140px;
 }
 
-.certificates hr {
-  color: #138781;
-  width: 400px;
-  margin: 10px auto;
-}
-
-.certificates h2 {
-  font-weight: bold;
-  color: #138781;
-}
-
-.certificates-subtitle {
-  color: #555;
-  font-size: 1rem;
-  margin-top: 8px;
-  margin-bottom: 40px;
-  letter-spacing: 0.3px;
-}
-
-/* ---- Grid ---- */
-
-.certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 26px;
-  padding: 0 60px 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ---- Card ---- */
-
-.cert-card {
-  position: relative;
+/* ================= CARD ================= */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(19, 135, 129, 0.10);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-  cursor: default;
+  transition: 0.3s ease;
 }
 
-.cert-card:hover,
-.cert-card--hovered {
-  transform: translateY(-7px);
-  box-shadow: 0 14px 36px rgba(19, 135, 129, 0.22);
-}
-
-/* ========================================
-   IMAGE SECTION (NEW)
-   ======================================== */
-
-.cert-card__image {
-  width: 100%;
-  height: 170px;
-  overflow: hidden;
-  background: #f5f5f5;
-}
-
-.cert-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-/* Hover zoom effect */
-.cert-card:hover .cert-card__image img {
-  transform: scale(1.06);
-}
-
-/* ========================================
-   TOP BAR + ICON
-   ======================================== */
-
-.cert-card__bar {
-  height: 5px;
-  width: 100%;
-  background: var(--accent, #138781);
-}
-
-.cert-card__top-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 18px 0;
-}
-
-.cert-card__icon-wrap {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--accent, #138781);
+#dark .card {
+  background: #1e1e1e;
+  border: 1px solid #333;
   color: #fff;
+}
+
+.certificates .card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.certificates .card:hover {
+  background-color: rgb(236, 199, 195);
+  border-radius: 8px;
+  box-shadow: 12px 15px 20px rgba(46, 61, 73, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.cert-title {
+  font-weight: 600; 
+}
+
+/* ================= BUTTON WRAPPER ================= */
+.button-wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  flex-shrink: 0;
+  margin-top: 25px;
 }
 
-/* Badge */
-
-.cert-card__special-badge {
-  font-size: 0.73rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: rgba(19, 135, 129, 0.10);
-  color: var(--accent, #138781);
-  border: 1px solid rgba(19, 135, 129, 0.28);
-  letter-spacing: 0.3px;
-}
-
-/* ========================================
-   BODY
-   ======================================== */
-
-.cert-card__body {
-  padding: 12px 18px 8px;
-  flex: 1;
-}
-
-.cert-card__title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #138781;
-  margin-bottom: 6px;
-  line-height: 1.35;
-}
-
-.cert-card__issuer {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.87rem;
-  color: #1e1e2c;
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-
-.cert-card__verified {
-  color: var(--accent, #138781);
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-.cert-card__date {
-  font-size: 0.78rem;
-  color: #999;
-  margin-bottom: 12px;
-}
-
-/* Skills */
-
-.cert-card__skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 4px;
-}
-
-.cert-card__skill-tag {
-  background: rgba(19, 135, 129, 0.09);
-  color: #138781;
-  border: 1px solid rgba(19, 135, 129, 0.22);
-  border-radius: 20px;
-  font-size: 0.70rem;
+/* ================= MODERN BUTTON BASE ================= */
+.modern-btn {
+  padding: 10px 20px;
+  font-size: 14px;
   font-weight: 600;
-  padding: 3px 10px;
-  letter-spacing: 0.2px;
-  transition: background 0.2s;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.cert-card:hover .cert-card__skill-tag {
-  background: rgba(19, 135, 129, 0.17);
+/* ================= PRIMARY (SHOW MORE) ================= */
+.modern-btn.primary {
+  background: #2563eb;
+  color: #fff;
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
-
-.cert-card__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 18px 16px;
-  border-top: 1px solid rgba(19, 135, 129, 0.12);
-  margin-top: 10px;
+.modern-btn.primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
-.cert-card__credential {
-  font-size: 0.68rem;
-  color: #bbb;
-  font-family: monospace;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 170px;
+/* ================= DANGER (SHOW LESS) ================= */
+.modern-btn.danger {
+  background: #ef4444;
+  color: #fff;
 }
 
-.cert-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.80rem;
-  font-weight: 600;
-  color: var(--accent, #138781);
-  text-decoration: none;
-  transition: opacity 0.2s;
+.modern-btn.danger:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
 }
 
-.cert-card__link:hover {
-  opacity: 0.7;
+/* ================= ACTIVE CLICK ================= */
+.modern-btn:active {
+  transform: scale(0.96);
 }
 
-/* ========================================
-   DARK MODE
-   ======================================== */
-
-#dark .certificates {
-  background-color: rgba(0, 0, 0, 0.2);
+/* ================= DARK MODE SUPPORT ================= */
+#dark .modern-btn.primary {
+  background: #3b82f6;
 }
 
-#dark .cert-card {
-  background: #1a1a2e;
+#dark .modern-btn.danger {
+  background: #f87171;
 }
 
-#dark .cert-card__title {
-  color: #4ecdc4;
-}
-
-#dark .cert-card__issuer {
-  color: #ddd;
-}
-
-#dark .cert-card__date {
-  color: #888;
-}
-
-#dark .cert-card__credential {
-  color: #555;
-}
-
-#dark .cert-card__skill-tag {
-  background: rgba(78, 205, 196, 0.10);
-  color: #4ecdc4;
-}
-
-/* ========================================
-   RESPONSIVE
-   ======================================== */
-
-@media (max-width: 992px) {
-  .certificates {
-    margin-left: 0;
-  }
-
-  .certificates-grid {
-    padding: 0 30px 40px;
-  }
-}
-
+/* ================= RESPONSIVE ================= */
 @media (max-width: 600px) {
   .certificates {
-    margin: 0;
     padding: 0;
-    margin-top: 30px;
-  }
-
-  .certificates-grid {
-    grid-template-columns: 1fr;
-    padding: 0 16px 30px;
+    margin-top: 50px;
   }
 }
+
+
