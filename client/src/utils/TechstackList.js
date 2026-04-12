@@ -2,7 +2,6 @@ import { BsBootstrap, BsFiletypeCss, BsFiletypeHtml } from "react-icons/bs";
 import { CgCPlusPlus } from "react-icons/cg";
 import { DiPython, DiJava } from "react-icons/di";
 import { FaNodeJs, FaAws } from "react-icons/fa6";
-import { SiTensorflow, SiKeras, SiRedux, SiSocketdotio, SiCloudinary } from "react-icons/si";
 
 import {
   SiJavascript,
@@ -18,11 +17,14 @@ import {
   SiPostman,
   SiPandas,
   SiNumpy,
-  SiMatplotlib,
-  SiSeaborn,
   SiGit,
   SiLinux,
+  SiRedux,
+  SiSocketdotio,
+  SiTensorflow,
+  SiKeras,
   SiThreedotjs,
+  SiCloudinary,
 } from "react-icons/si";
 
 export const TechStackList = [
@@ -55,8 +57,10 @@ export const TechStackList = [
 
   { _id: 22, name: "NumPy", icon: SiNumpy },
   { _id: 23, name: "Pandas", icon: SiPandas },
-  { _id: 24, name: "Matplotlib", icon: SiMatplotlib },
-  { _id: 25, name: "Seaborn", icon: SiSeaborn },
+
+  // ⚠️ No official icons → using Python icon fallback
+  { _id: 24, name: "Matplotlib", icon: DiPython },
+  { _id: 25, name: "Seaborn", icon: DiPython },
 
   { _id: 26, name: "TensorFlow", icon: SiTensorflow },
   { _id: 27, name: "Keras", icon: SiKeras },
