@@ -8,19 +8,24 @@ const Project = () => {
         <>
             <div className="container project" id="project">
                 <RubberBand>
-                    <h2 className='text-center col-12 mt-3 mb-1 text-uppercase'>My Recent Projects </h2>
-                    <p className='text-center '> 👉 Here are my top projects with live link and source code </p>
+                    <h2 className='text-center col-12 mt-3 mb-1 text-uppercase'>
+                        My Recent Projects
+                    </h2>
+                    <p className='text-center'>
+                        👉 Here are my top projects with live link and source code
+                    </p>
                 </RubberBand>
 
-                {/* card design */}
-                <div className="row " id="ads">
+                <div className="row" id="ads">
                     <Spin>
+
+                        {/* CHAT APP */}
                         <div className="col-md-4 px-6">
                             <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://e0.pxfuel.com/wallpapers/610/841/desktop-wallpaper-social-media-top-47-social-media-original-100-marketing.jpg"
-                                        alt="project1"
+                                        src="https://images.unsplash.com/photo-1611162617474-5b21e879e113"
+                                        alt="chat-app"
                                     />
                                 </div>
                                 <div className="card-image-overly m-auto mt-3">
@@ -30,61 +35,55 @@ const Project = () => {
                                     <span className="card-detail-badge">MongoDB</span>
                                 </div>
                                 <div className="card-body text-center">
-                                    <div className="ad-title m-auto">
-                                        <h5 className="text-uppercase">Chat Web Application</h5>
-                                    </div>
-                                    <div className="button-row">
-                                        <a
-                                            className="ad-btn"
-                                            href="https://socilamediafinalfixed-9iof.onrender.com/chat"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Project Link
-                                        </a>
-                                       
-                                    </div>
+                                    <h5 className="text-uppercase">Chat Web Application</h5>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://socilamediafinalfixed-9iof.onrender.com/chat"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Project Link
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="card rounded">
-                                <div className="card-image">
-                                    <img
-                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA59ZURr13bf01VlgjER0nV15Ir8QK9xtI9w&usqp=CAU"
-                                        alt="project3"
-                                    />
-                                </div>
-                                <div className="card-image-overly m-auto mt-3">
-                                    <span className="card-detail-badge">Node</span>
-                                    <span className="card-detail-badge">Express</span>
-                                    <span className="card-detail-badge">React</span>
-                                    <span className="card-detail-badge">MongoDB</span>
-                                </div>
-                                <div className="card-body text-center">
-                                    <div className="ad-title m-auto">
-                                        <h5 className="text-uppercase">Ecommerce Website</h5>
-                                    </div>
-                                    <div className="button-row">
-                                        <a
-                                            className="ad-btn"
-                                            href="https://sagar-das-ecom-project.vercel.app/    "
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Project Link
-                                        </a>
 
-                                    </div>
+                        {/* ECOMMERCE */}
+                        <div className="col-md-4">
+                            <div className="card rounded mb-4">
+                                <div className="card-image">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
+                                        alt="ecommerce"
+                                    />
+                                </div>
+                                <div className="card-image-overly m-auto mt-3">
+                                    <span className="card-detail-badge">Node</span>
+                                    <span className="card-detail-badge">Express</span>
+                                    <span className="card-detail-badge">React</span>
+                                    <span className="card-detail-badge">MongoDB</span>
+                                </div>
+                                <div className="card-body text-center">
+                                    <h5 className="text-uppercase">Ecommerce Website</h5>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://sagar-das-ecom-project.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Project Link
+                                    </a>
                                 </div>
                             </div>
                         </div>
+
+                        {/* VIDEO CALL */}
                         <div className="col-md-4 px-6">
-                            <div className="card rounded">
+                            <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://i.ytimg.com/vi/LdtRhnXXN8k/maxresdefault.jpg"
-                                        alt="project2"
+                                        src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04"
+                                        alt="video-call"
                                     />
                                 </div>
                                 <div className="card-image-overly m-auto mt-3">
@@ -94,31 +93,26 @@ const Project = () => {
                                     <span className="card-detail-badge">Mongo</span>
                                 </div>
                                 <div className="card-body text-center">
-                                    <div className="ad-title m-auto">
-                                        <h5 className="text-uppercase">Video Calling Website</h5>
-                                    </div>
-                                    <div className="button-row">
-                                        <a
-                                            className="ad-btn"
-                                            href="https://flora-frontend.onrender.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Project Link
-                                        </a>
-                                    
-                                    </div>
+                                    <h5 className="text-uppercase">Video Calling Website</h5>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://flora-frontend.onrender.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Project Link
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-
+                        {/* LINKLOOM */}
                         <div className="col-md-4">
-                            <div className="card rounded">
+                            <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://drive.google.com/file/d/1189wJHBgCBFjNk_C9xky3W5nu2fEDzB3/view?usp=drive_link"
-                                        alt="project6"
+                                        src="https://images.unsplash.com/photo-1611605698335-8b1569810432"
+                                        alt="social-media"
                                     />
                                 </div>
                                 <div className="card-image-overly m-auto mt-3">
@@ -128,30 +122,26 @@ const Project = () => {
                                     <span className="card-detail-badge">MongoDB</span>
                                 </div>
                                 <div className="card-body text-center">
-                                    <div className="ad-title m-auto">
-                                        <h5 className="text-uppercase">LinkLoom Social Media</h5>
-                                    </div>
-                                    <div className="button-row">
-                                        <a
-                                            className="ad-btn"
-                                            href="https://linkloomsocialmedia.vercel.app/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Project Link
-                                        </a>
-
-                                    </div>
+                                    <h5 className="text-uppercase">LinkLoom Social Media</h5>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://linkloomsocialmedia.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Project Link
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
+                        {/* PORTFOLIO */}
                         <div className="col-md-4">
-                            <div className="card rounded">
+                            <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://www.swic.edu/wp-content/uploads/2021/05/portfolio.png"
-                                        alt="project4"
+                                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                                        alt="portfolio"
                                     />
                                 </div>
                                 <div className="card-image-overly m-auto mt-3">
@@ -161,30 +151,26 @@ const Project = () => {
                                     <span className="card-detail-badge">MongoDB</span>
                                 </div>
                                 <div className="card-body text-center">
-                                    <div className="ad-title m-auto">
-                                        <h5 className="text-uppercase">PortFolio Website</h5>
-                                    </div>
-                                    <div className="button-row">
-                                        <a
-                                            className="ad-btn"
-                                            href="https://portfolio-fixed-website-w69n.onrender.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Project Link
-                                        </a>
-
-                                    </div>
+                                    <h5 className="text-uppercase">Portfolio Website</h5>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://portfolio-fixed-website-w69n.onrender.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Project Link
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
+                        {/* FLORA VISION */}
                         <div className="col-md-4 px-6">
-                            <div className="card rounded">
+                            <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://drive.google.com/file/d/16Y1Zg3l_jVp5Af-z6cS57uHcsWR8g5KT/view?usp=sharing"
-                                        alt="project5"
+                                        src="https://images.unsplash.com/photo-1581093588401-22b63b8f0f8c"
+                                        alt="flora-vision"
                                     />
                                 </div>
                                 <div className="card-image-overly m-auto mt-3">
@@ -194,24 +180,18 @@ const Project = () => {
                                     <span className="card-detail-badge">Python</span>
                                 </div>
                                 <div className="card-body text-center">
-                                    <div className="ad-title m-auto">
-                                        <h5 className="text-uppercase">Flora-Vision</h5>
-                                    </div>
-                                    <div className="button-row">
-                                        <a
-                                            className="ad-btn"
-                                            href="https://flora-frontend.onrender.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Project Link
-                                        </a>
-
-                                    </div>
+                                    <h5 className="text-uppercase">Flora-Vision</h5>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://flora-frontend.onrender.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Project Link
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
 
                     </Spin>
                 </div>
@@ -220,4 +200,4 @@ const Project = () => {
     )
 }
 
-export default Project
+export default Project;
