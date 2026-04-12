@@ -37,7 +37,7 @@ function App() {
 
         <Tada>
           <div className="footer pb-3 ms-3 mb-12">
-            <h4 className="text-center mb-10">Designed By 😍 SAGAR KUMAR DAS &copy; 2024</h4>
+            <h4 className="text-center mb-10">Designed By 😍 SAGAR KUMAR DAS &copy; 2026</h4>
           </div>
         </Tada>
       </div>
