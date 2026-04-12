@@ -13,7 +13,7 @@ const Home = () => {
         setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
     };
     
-    const resumeUrl = 'https://drive.google.com/file/d/1wMLik36_zU2gRyFpWSNTgAAbgsE4MNI6/view?usp=drive_link';
+    const resumeUrl = 'https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view?usp=sharing';
     
     return (
         <>
