@@ -38,24 +38,29 @@ const WorkExp = () => {
                             <li>Integrated REST APIs for scalable backend communication</li>
                         </ul>
                     </VerticalTimelineElement>
-                        <VerticalTimelineElement
-                            className="vertical-timeline-element--work"
-                            contentStyle={{ background: "white", color: "#1e1e2c" }}
-                            contentArrowStyle={{
-                                borderRight: "7px solid  white",
-                            }}
-                            date="2023 - present"
-                            iconStyle={{ background: "#1e1e2c", color: "#fff" }}
-                            icon={<SiReact />}
-                        >
-                            <h3 className="vertical-timeline-element-title">
-                               MERN Full Stack Developer
-                            </h3>
-                            <p>
-                                Creative Design, User Experience, Visual Design, Project
-                                Management
-                            </p>
-                        </VerticalTimelineElement>
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        contentStyle={{ background: "white", color: "#1e1e2c" }}
+                        contentArrowStyle={{
+                            borderRight: "7px solid  white",
+                        }}
+                        date="2023 - Present"
+                        iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+                        icon={<SiReact />}
+                    >
+                        <h3 className="vertical-timeline-element-title">
+                            MERN Full Stack Developer
+                        </h3>
+                        <ul>
+                            <li>Frontend Development (React.js)</li>
+                            <li>Backend Development (Node.js, Express)</li>
+                            <li>API Development & Integration</li>
+                            <li>API Testing (Postman)</li>
+                            <li>Database Management (MongoDB & MySql/SQL)</li>
+                            <li> cloud Services: AWS(S3,EC2,Lambda)
+                            <li>Code Testing & Debugging(Jira, VsCode, Chrome DevTools)</li>
+                        </ul>
+                    </VerticalTimelineElement>
 
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
