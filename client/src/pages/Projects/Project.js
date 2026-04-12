@@ -24,7 +24,7 @@ const Project = () => {
                             <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://images.unsplash.com/photo-1611162617474-5b21e879e113"
+                                        src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                         alt="chat-app"
                                     />
                                 </div>
@@ -111,7 +111,7 @@ const Project = () => {
                             <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://images.unsplash.com/photo-1611605698335-8b1569810432"
+                                        src="https://media.istockphoto.com/id/2154222115/photo/multicolored-threads-background.jpg?s=2048x2048&w=is&k=20&c=J18d30lLMwDOmEzappjb8QtGnMVQ3j52QCbW1xEIWLk="
                                         alt="social-media"
                                     />
                                 </div>
@@ -169,7 +169,7 @@ const Project = () => {
                             <div className="card rounded mb-4">
                                 <div className="card-image">
                                     <img
-                                        src="https://images.unsplash.com/photo-1581093588401-22b63b8f0f8c"
+                                        src="https://images.unsplash.com/photo-1768400444194-5c83d1a349c8?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                         alt="flora-vision"
                                     />
                                 </div>
