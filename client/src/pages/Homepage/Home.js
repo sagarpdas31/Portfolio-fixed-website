@@ -1,146 +1,54 @@
-// import React from 'react';
-// import Typewriter from "typewriter-effect";
-// import './home.css';
-// import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-// import { useTheme } from '../../Context/ThemeContext';
-// import Fade from 'react-reveal/Fade';
-
-// const Home = () => {
-//     const [theme, setTheme] = useTheme();
-    
-//     // Handle theme
-//     const handleTheme = () => {
-//         setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
-//     };
-    
-//     const resumeUrl = 'https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view?usp=sharing';
-    
-//     return (
-//         <>
-//             <div className="container-fluid home-container" id="home">
-//                 <div className="theme-btn" onClick={handleTheme}>
-//                     {theme === "light" ? (
-//                         <BsFillMoonStarsFill size={30} />
-//                     ) : (
-//                         <BsFillSunFill size={30} />
-//                     )}
-//                 </div>
-//                 <div className="container home-content">
-//                     <Fade right>
-//                         <h2>Hi I'm Sagar</h2>
-//                         <h1>
-//                             <Typewriter 
-//                                 options={{
-//                                     strings: ["Full Stack Developer!", "MERN Stack Developer!", "Data Structure & Algorithms!", "C++!"],
-//                                     autoStart: true,
-//                                     loop: true
-//                                 }} 
-//                             />
-//                         </h1>
-//                     </Fade>
-//                     <Fade bottom>
-//                         <div className="home-buttons">
-//                             <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' rel='noreferrer' target='_blank'>Hire Me</a>
-//                             <a className='btn btn-cv' href={resumeUrl} rel="noopener noreferrer">My Resume</a>
-//                         </div>
-//                     </Fade>
-//                 </div>
-//             </div>
-//         </>
-//     );
-// }
-
-// export default Home;
-
-
-
-
-
-
 import React from 'react';
 import Typewriter from "typewriter-effect";
 import './home.css';
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useTheme } from '../../Context/ThemeContext';
 import Fade from 'react-reveal/Fade';
 
 const Home = () => {
     const [theme, setTheme] = useTheme();
-
+    
+    // Handle theme
     const handleTheme = () => {
-        setTheme(prev => (prev === "light" ? "dark" : "light"));
+        setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
     };
-
+    
     const resumeUrl = 'https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view?usp=sharing';
-
+    
     return (
-        <div className="home-container" id="home">
-
-            {/* Theme Toggle */}
-            <div className="theme-btn" onClick={handleTheme}>
-                {theme === "light" ? <BsFillMoonStarsFill size={22}/> : <BsFillSunFill size={22}/>}
-            </div>
-
-            <div className="home-wrapper">
-
-                {/* LEFT CONTENT */}
-                <Fade left>
-                    <div className="home-left">
-                        <h3>Hello 👋, I'm</h3>
-                        <h1>Sagar</h1>
-
-                        <h2>
-                            <Typewriter
+        <>
+            <div className="container-fluid home-container" id="home">
+                <div className="theme-btn" onClick={handleTheme}>
+                    {theme === "light" ? (
+                        <BsFillMoonStarsFill size={30} />
+                    ) : (
+                        <BsFillSunFill size={30} />
+                    )}
+                </div>
+                <div className="container home-content">
+                    <Fade right>
+                        <h2>Hi I'm Sagar</h2>
+                        <h1>
+                            <Typewriter 
                                 options={{
-                                    strings: [
-                                        "Full Stack Developer",
-                                        "MERN Stack Developer",
-                                        "DSA Enthusiast",
-                                        "C++ Programmer"
-                                    ],
+                                    strings: ["Full Stack Developer!", "MERN Stack Developer!", "Data Structure & Algorithms!", "C++!"],
                                     autoStart: true,
                                     loop: true
-                                }}
+                                }} 
                             />
-                        </h2>
-
-                        <p>
-                            I build scalable web applications with clean UI and strong backend logic.
-                        </p>
-
+                        </h1>
+                    </Fade>
+                    <Fade bottom>
                         <div className="home-buttons">
-                            <a className='btn btn-hire'
-                               href='https://api.whatsapp.com/send?phone=8539067315'
-                               target='_blank' rel='noreferrer'>
-                                Hire Me
-                            </a>
-
-                            <a className='btn btn-cv'
-                               href={resumeUrl}
-                               target='_blank' rel='noopener noreferrer'>
-                                Resume
-                            </a>
+                            <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' rel='noreferrer' target='_blank'>Hire Me</a>
+                            <a className='btn btn-cv' href={resumeUrl} rel="noopener noreferrer">My Resume</a>
                         </div>
-
-                        {/* Social Icons */}
-                        <div className="social-icons">
-                            <a href="#"><FaGithub /></a>
-                            <a href="#"><FaLinkedin /></a>
-                        </div>
-                    </div>
-                </Fade>
-
-                {/* RIGHT IMAGE */}
-                <Fade right>
-                    <div className="home-right">
-                        <img src="/profile.png" alt="profile" />
-                    </div>
-                </Fade>
-
+                    </Fade>
+                </div>
             </div>
-        </div>
+        </>
     );
-};
+}
 
 export default Home;
+
