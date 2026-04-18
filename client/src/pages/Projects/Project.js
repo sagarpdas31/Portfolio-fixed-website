@@ -1,216 +1,8 @@
-// import React from 'react'
-// import './Project.css'
-// import RubberBand from "react-reveal/RubberBand"
-// import Spin from "react-reveal/Spin"
-
-// const Project = () => {
-//     return (
-//         <>
-//             <div className="container project" id="project">
-//                 <RubberBand>
-//                     <h2 className='text-center col-12 mt-3 mb-1 text-uppercase'>
-//                         My Recent Projects
-//                     </h2>
-//                     <p className='text-center'>
-//                         👉 Here are my top projects with live link and source code
-//                     </p>
-//                 </RubberBand>
-
-//                 <div className="row" id="ads">
-//                     <Spin>
-
-//                         {/* CHAT APP */}
-//                         <div className="col-md-4 px-6">
-//                             <div className="card rounded mb-4">
-//                                 <div className="card-image">
-//                                     <img
-//                                         src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-//                                         alt="chat-app"
-//                                     />
-//                                 </div>
-//                                 <div className="card-image-overly m-auto mt-3">
-//                                     <span className="card-detail-badge">Node</span>
-//                                     <span className="card-detail-badge">Express</span>
-//                                     <span className="card-detail-badge">React</span>
-//                                     <span className="card-detail-badge">MongoDB</span>
-//                                 </div>
-//                                 <div className="card-body text-center">
-//                                     <h5 className="text-uppercase">Chat Web Application</h5>
-//                                     <a
-//                                         className="ad-btn"
-//                                         href="https://socilamediafinalfixed-9iof.onrender.com/chat"
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                     >
-//                                         Project Link
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-//                         {/* ECOMMERCE */}
-//                         <div className="col-md-4">
-//                             <div className="card rounded mb-4">
-//                                 <div className="card-image">
-//                                     <img
-//                                         src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
-//                                         alt="ecommerce"
-//                                     />
-//                                 </div>
-//                                 <div className="card-image-overly m-auto mt-3">
-//                                     <span className="card-detail-badge">Node</span>
-//                                     <span className="card-detail-badge">Express</span>
-//                                     <span className="card-detail-badge">React</span>
-//                                     <span className="card-detail-badge">MongoDB</span>
-//                                 </div>
-//                                 <div className="card-body text-center">
-//                                     <h5 className="text-uppercase">Ecommerce Website</h5>
-//                                     <a
-//                                         className="ad-btn"
-//                                         href="https://sagar-das-ecom-project.vercel.app/"
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                     >
-//                                         Project Link
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-//                         {/* VIDEO CALL */}
-//                         <div className="col-md-4 px-6">
-//                             <div className="card rounded mb-4">
-//                                 <div className="card-image">
-//                                     <img
-//                                         src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04"
-//                                         alt="video-call"
-//                                     />
-//                                 </div>
-//                                 <div className="card-image-overly m-auto mt-3">
-//                                     <span className="card-detail-badge">Next.js</span>
-//                                     <span className="card-detail-badge">Node</span>
-//                                     <span className="card-detail-badge">Express</span>
-//                                     <span className="card-detail-badge">Mongo</span>
-//                                 </div>
-//                                 <div className="card-body text-center">
-//                                     <h5 className="text-uppercase">Video Calling Website</h5>
-//                                     <a
-//                                         className="ad-btn"
-//                                         href="https://flora-frontend.onrender.com/"
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                     >
-//                                         Project Link
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-//                         {/* LINKLOOM */}
-//                         <div className="col-md-4">
-//                             <div className="card rounded mb-4">
-//                                 <div className="card-image">
-//                                     <img
-//                                         src="https://media.istockphoto.com/id/2154222115/photo/multicolored-threads-background.jpg?s=2048x2048&w=is&k=20&c=J18d30lLMwDOmEzappjb8QtGnMVQ3j52QCbW1xEIWLk="
-//                                         alt="social-media"
-//                                     />
-//                                 </div>
-//                                 <div className="card-image-overly m-auto mt-3">
-//                                     <span className="card-detail-badge">Node</span>
-//                                     <span className="card-detail-badge">Express</span>
-//                                     <span className="card-detail-badge">React</span>
-//                                     <span className="card-detail-badge">MongoDB</span>
-//                                 </div>
-//                                 <div className="card-body text-center">
-//                                     <h5 className="text-uppercase">LinkLoom Social Media</h5>
-//                                     <a
-//                                         className="ad-btn"
-//                                         href="https://linkloomsocialmedia.vercel.app/"
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                     >
-//                                         Project Link
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-//                         {/* PORTFOLIO */}
-//                         <div className="col-md-4">
-//                             <div className="card rounded mb-4">
-//                                 <div className="card-image">
-//                                     <img
-//                                         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-//                                         alt="portfolio"
-//                                     />
-//                                 </div>
-//                                 <div className="card-image-overly m-auto mt-3">
-//                                     <span className="card-detail-badge">Node</span>
-//                                     <span className="card-detail-badge">Express</span>
-//                                     <span className="card-detail-badge">React</span>
-//                                     <span className="card-detail-badge">MongoDB</span>
-//                                 </div>
-//                                 <div className="card-body text-center">
-//                                     <h5 className="text-uppercase">Portfolio Website</h5>
-//                                     <a
-//                                         className="ad-btn"
-//                                         href="https://portfolio-fixed-website-w69n.onrender.com/"
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                     >
-//                                         Project Link
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-//                         {/* FLORA VISION */}
-//                         <div className="col-md-4 px-6">
-//                             <div className="card rounded mb-4">
-//                                 <div className="card-image">
-//                                     <img
-//                                         src="https://images.unsplash.com/photo-1768400444194-5c83d1a349c8?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-//                                         alt="flora-vision"
-//                                     />
-//                                 </div>
-//                                 <div className="card-image-overly m-auto mt-3">
-//                                     <span className="card-detail-badge">React</span>
-//                                     <span className="card-detail-badge">Node</span>
-//                                     <span className="card-detail-badge">Express</span>
-//                                     <span className="card-detail-badge">Python</span>
-//                                 </div>
-//                                 <div className="card-body text-center">
-//                                     <h5 className="text-uppercase">Flora-Vision</h5>
-//                                     <a
-//                                         className="ad-btn"
-//                                         href="https://flora-frontend.onrender.com/"
-//                                         target="_blank"
-//                                         rel="noopener noreferrer"
-//                                     >
-//                                         Project Link
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         </div>
-
-//                     </Spin>
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default Project;
-
-
 import React, { useState } from "react";
 import "./Project.css";
 import RubberBand from "react-reveal/RubberBand";
 import Spin from "react-reveal/Spin";
 
-/* =========================
-   PROJECT DATA
-========================= */
 const projectData = [
     {
         id: 1,
@@ -229,10 +21,11 @@ const projectData = [
     },
     {
         id: 3,
-        title: "Video Calling Website",
+        title: "Leave Management to-do",
         image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
         skills: ["Next.js", "Node", "Express", "Mongo"],
-        link: "https://flora-frontend.onrender.com/",
+       link: " https://leave-managament-system.vercel.app/"
+        // link: "https://flora-frontend.onrender.com/",
     },
     {
         id: 4,
@@ -257,6 +50,8 @@ const projectData = [
         skills: ["React", "Node", "Express", "Python"],
         link: "https://flora-frontend.onrender.com/",
     },
+
+  
 ];  
 
 /* =========================
