@@ -21,7 +21,7 @@ const projectData = [
     },
     {
         id: 3,
-        title: "Leave Management to-do",
+        title: "Leave Management System",
         image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
         skills: ["Next.js", "Node", "Express", "Mongo"],
        link: " https://leave-managament-system.vercel.app/"
