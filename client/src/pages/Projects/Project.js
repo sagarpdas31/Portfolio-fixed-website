@@ -6,7 +6,7 @@ import Spin from "react-reveal/Spin";
 const projectData = [
        {
         id: 1,
-        title: "",
+        title: "Next-FLow.AI",
         image:
             "https://drive.google.com/file/d/1dvTxn3vxRiD_YhyqoP0yC6SmNXk-frec/view?usp=sharing",
         skills: ["Next.js", "Gemini API", "TypeScript", "PostgreSQL"],
