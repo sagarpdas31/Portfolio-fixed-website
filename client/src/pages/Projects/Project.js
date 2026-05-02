@@ -8,8 +8,8 @@ const projectData = [
         id: 1,
         title: "Next-FLow.AI",
         image:
-            "https://drive.google.com/file/d/1dvTxn3vxRiD_YhyqoP0yC6SmNXk-frec/view?usp=sharing",
-        skills: ["Next.js", "Gemini API", "TypeScript", "PostgreSQL"],
+            "https://drive.google.com/file/d/1dvTxn3vxRiD_YhyqoP0yC6SmNXk-frec",
+        skills: ["Next.js", "LLM", "TypeScript", "PostgreSQL"],
         link: "https://next-flow-galaxy-ai-kx88.vercel.app/",
     },
 
