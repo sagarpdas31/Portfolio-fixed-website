@@ -4,23 +4,33 @@ import RubberBand from "react-reveal/RubberBand";
 import Spin from "react-reveal/Spin";
 
 const projectData = [
-    {
+       {
         id: 1,
-        title: "Chat Web Application",
+        title: "",
         image:
-            "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170",
-        skills: ["Node", "Express", "React", "MongoDB"],
-        link: "https://socilamediafinalfixed-9iof.onrender.com/chat",
+            "https://drive.google.com/file/d/1dvTxn3vxRiD_YhyqoP0yC6SmNXk-frec/view?usp=sharing",
+        skills: ["Next.js", "Gemini API", "TypeScript", "PostgreSQL"],
+        link: "https://next-flow-galaxy-ai-kx88.vercel.app/",
     },
-    {
+
+       {
         id: 2,
         title: "Ecommerce Website",
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
         skills: ["Node", "Express", "React", "MongoDB"],
-        link: "https://sagar-das-ecom-project.vercel.app/",
+        link: "https://fullstack-ecom-app-sagar-das.vercel.app/",
     },
     {
         id: 3,
+        title: "Chat Web Application",
+        image:
+            "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170",
+        skills: ["Node", "Socket.io", "React", "MongoDB"],
+        link: "https://socilamediafinalfixed-9iof.onrender.com/",
+    },
+ 
+    {
+        id: 4,
         title: "Leave Management System",
         image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
         skills: ["Next.js", "Node", "Express", "Mongo"],
@@ -28,7 +38,7 @@ const projectData = [
         // link: "https://flora-frontend.onrender.com/",
     },
     {
-        id: 4,
+        id: 5,
         title: "LinkLoom Social Media",
         image:
             "https://media.istockphoto.com/id/2154222115/photo/multicolored-threads-background.jpg?s=2048x2048&w=is&k=20&c=J18d30lLMwDOmEzappjb8QtGnMVQ3j52QCbW1xEIWLk=",
@@ -36,14 +46,14 @@ const projectData = [
         link: "https://linkloomsocialmedia.vercel.app/",
     },
     {
-        id: 5,
+        id: 6,
         title: "Portfolio Website",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
         skills: ["Node", "Express", "React", "MongoDB"],
         link: "https://portfolio-fixed-website-w69n.onrender.com/",
     },
     {
-        id: 6,
+        id: 7,
         title: "Flora-Vision",
         image:
             "https://images.unsplash.com/photo-1768400444194-5c83d1a349c8?q=80&w=1172",
