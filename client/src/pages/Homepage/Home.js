@@ -52,14 +52,6 @@
 
 // export default Home;
 
-
-
-
-
-
-
-
-
 import React from 'react';
 import Typewriter from "typewriter-effect";
 import './home.css';
@@ -80,7 +72,7 @@ const tags = [
   { label: "Python Developer",        color: "blue"  },
   { label: "Data Engineer",           color: "orange"},
   { label: "MERN Stack",              color: "pink"  },
-  { label: "DSA · C++",              color: "cyan"  },
+  { label: "DSA · C++",               color: "cyan"  },
 ];
 
 const Home = () => {
@@ -114,56 +106,61 @@ const Home = () => {
           </Fade>
 
           <Fade right>
-            <h2 className="hero-name">
-              Hi, I'm <span className="name-gradient">Sagar</span>
-            </h2>
-
-            <div className="typewriter-wrap">
-              <span className="tw-prefix">//</span>
-              <Typewriter
-                options={{
-                  strings: roles,
-                  autoStart: true,
-                  loop: true,
-                  delay: 60,
-                  deleteSpeed: 32,
-                }}
-              />
+            {/* ✅ Single wrapper div — Fade requires exactly one child */}
+            <div>
+              <h2 className="hero-name">
+                Hi, I'm <span className="name-gradient">Sagar</span>
+              </h2>
+              <div className="typewriter-wrap">
+                <span className="tw-prefix">//</span>
+                <Typewriter
+                  options={{
+                    strings: roles,
+                    autoStart: true,
+                    loop: true,
+                    delay: 60,
+                    deleteSpeed: 32,
+                  }}
+                />
+              </div>
             </div>
           </Fade>
 
           <Fade bottom>
-            <p className="hero-desc">
-              Building end-to-end digital products — from intelligent ML pipelines
-              to blazing-fast full-stack apps and clean data architectures.
-            </p>
+            {/* ✅ Single wrapper div — Fade requires exactly one child */}
+            <div>
+              <p className="hero-desc">
+                Building end-to-end digital products — from intelligent ML pipelines
+                to blazing-fast full-stack apps and clean data architectures.
+              </p>
 
-            <div className="tag-row">
-              {tags.map(t => (
-                <span key={t.label} className={`tag tag-${t.color}`}>
-                  <span className="tag-dot" />
-                  {t.label}
-                </span>
-              ))}
-            </div>
+              <div className="tag-row">
+                {tags.map(t => (
+                  <span key={t.label} className={`tag tag-${t.color}`}>
+                    <span className="tag-dot" />
+                    {t.label}
+                  </span>
+                ))}
+              </div>
 
-            <div className="home-buttons">
-              
-                className="btn btn-hire"
-                href="https://api.whatsapp.com/send?phone=8539067315"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Hire Me
-              </a>
-              
-                className="btn btn-cv"
-                href="https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                My Resume
-              </a>
+              <div className="home-buttons">
+                
+                  className="btn btn-hire"
+                  href="https://api.whatsapp.com/send?phone=8539067315"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Hire Me
+                </a>
+                
+                  className="btn btn-cv"
+                  href="https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  My Resume
+                </a>
+              </div>
             </div>
           </Fade>
 
@@ -174,3 +171,8 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
+
