@@ -21,7 +21,7 @@ const specializations = [
 
 const highlights = [
     { icon: '🏆', label: 'SIH 2023', value: 'Top Team · 70+ teams' },
-    { icon: '💻', label: 'LeetCode', value: '400+ problems · Rank 2234' },
+    { icon: '💻', label: 'LeetCode', value: '1000+ problems · Rank 2234' },
     { icon: '🚀', label: 'Hiring Challenges', value: 'Top 1% · Infosys & InfoEdge' },
     { icon: '🎓', label: 'TCS NQT 2026', value: 'Ninja Role · 1L+ candidates' },
 ];
