@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: portfolio-fixed-website
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: MONGO_URL
+        sync: false
+      - key: SENDGRID_API_KEY
+        sync: false
+      - key: SENDGRID_FROM_EMAIL
+        sync: false
+      - key: SENDGRID_TO_EMAIL
+        sync: false
