@@ -53,46 +53,50 @@
 // export default Home;
 
 import React from 'react';
-import Typewriter from "typewriter-effect";
+import Typewriter from 'typewriter-effect';
 import './home.css';
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 import { useTheme } from '../../Context/ThemeContext';
 import Fade from 'react-reveal/Fade';
 
 const roles = [
-  "Full Stack AI Developer",
-  "MERN Stack Developer",
-  "Python Developer",
-  "Data Engineer",
-  "C++ & DSA",
+  'Full Stack AI Developer',
+  'MERN Stack Developer',
+  'Python Developer',
+  'Data Engineer',
+  'C++ & DSA',
 ];
 
 const tags = [
-  { label: "Full Stack AI Developer", color: "green" },
-  { label: "Python Developer",        color: "blue"  },
-  { label: "Data Engineer",           color: "orange"},
-  { label: "MERN Stack",              color: "pink"  },
-  { label: "DSA · C++",               color: "cyan"  },
+  { label: 'Full Stack AI Developer', dot: 'green'  },
+  { label: 'Python Developer',        dot: 'blue'   },
+  { label: 'Data Engineer',           dot: 'orange' },
+  { label: 'MERN Stack',              dot: 'pink'   },
+  { label: 'DSA · C++',               dot: 'cyan'   },
 ];
 
 const Home = () => {
   const [theme, setTheme] = useTheme();
 
   const handleTheme = () => {
-    setTheme(prev => prev === "light" ? "dark" : "light");
+    setTheme(function(prev) {
+      return prev === 'light' ? 'dark' : 'light';
+    });
   };
 
   return (
     <div className="home-container" id="home">
+
       <div className="bg-grid" />
       <div className="orb orb-1" />
       <div className="orb orb-2" />
 
       <div className="theme-btn" onClick={handleTheme}>
-        {theme === "light"
-          ? <BsFillMoonStarsFill size={22} />
-          : <BsFillSunFill size={22} />
-        }
+        {theme === 'light' ? (
+          <BsFillMoonStarsFill size={22} />
+        ) : (
+          <BsFillSunFill size={22} />
+        )}
       </div>
 
       <div className="hero">
@@ -106,10 +110,9 @@ const Home = () => {
           </Fade>
 
           <Fade right>
-            {/* ✅ Single wrapper div — Fade requires exactly one child */}
-            <div>
+            <div className="fade-group">
               <h2 className="hero-name">
-                Hi, I'm <span className="name-gradient">Sagar</span>
+                Hi, I&apos;m <span className="name-gradient">Sagar</span>
               </h2>
               <div className="typewriter-wrap">
                 <span className="tw-prefix">//</span>
@@ -127,36 +130,36 @@ const Home = () => {
           </Fade>
 
           <Fade bottom>
-            {/* ✅ Single wrapper div — Fade requires exactly one child */}
-            <div>
+            <div className="fade-group">
               <p className="hero-desc">
-                Building end-to-end digital products — from intelligent ML pipelines
-                to blazing-fast full-stack apps and clean data architectures.
+                Building end-to-end digital products — from intelligent ML
+                pipelines to blazing-fast full-stack apps and clean data
+                architectures.
               </p>
-
               <div className="tag-row">
-                {tags.map(t => (
-                  <span key={t.label} className={`tag tag-${t.color}`}>
-                    <span className="tag-dot" />
-                    {t.label}
-                  </span>
-                ))}
+                {tags.map(function(t) {
+                  return (
+                    <span key={t.label} className={'tag tag-' + t.dot}>
+                      <span className="tag-dot" />
+                      {t.label}
+                    </span>
+                  );
+                })}
               </div>
-
               <div className="home-buttons">
                 
                   className="btn btn-hire"
                   href="https://api.whatsapp.com/send?phone=8539067315"
-                  rel="noreferrer"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Hire Me
                 </a>
                 
                   className="btn btn-cv"
                   href="https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view"
-                  rel="noopener noreferrer"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   My Resume
                 </a>
@@ -166,13 +169,9 @@ const Home = () => {
 
         </div>
       </div>
+
     </div>
   );
 };
 
 export default Home;
-
-
-
-
-
