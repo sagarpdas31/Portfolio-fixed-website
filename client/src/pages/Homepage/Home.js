@@ -7,47 +7,57 @@ import Fade from 'react-reveal/Fade';
 
 const Home = () => {
     const [theme, setTheme] = useTheme();
-    
-    // Handle theme
+
     const handleTheme = () => {
         setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
     };
-    
-    const resumeUrl = 'https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view?usp=sharing';
-    
+
+    const resumeUrl = 'https://drive.google.com/file/d/1wMLik36_zU2gRyFpWSNTgAAbgsE4MNI6/view?usp=sharing';
+
     return (
         <>
             <div className="container-fluid home-container" id="home">
                 <div className="theme-btn" onClick={handleTheme}>
                     {theme === "light" ? (
-                        <BsFillMoonStarsFill size={30} />
+                        <BsFillMoonStarsFill size={22} />
                     ) : (
-                        <BsFillSunFill size={30} />
+                            <BsFillSunFill size={22} />
                     )}
                 </div>
                 <div className="container home-content">
                     <Fade right>
                         <h2>Hi I'm Sagar</h2>
                         <h1>
-                            <Typewriter 
+                            <Typewriter
                                 options={{
-                                    strings: ["Full Stack Developer!", "MERN Stack Developer!", "Data Structure & Algorithms!", "C++!"],
+                                    strings: [
+                                        "AI Full Stack Developer!",
+                                        "MERN Stack Developer!",
+                                        "Next.js & LangChain!",
+                                        "Data Structures & Algorithms!",
+                                        "C++!",
+                                        "Python Developer"
+                                    ],
                                     autoStart: true,
-                                    loop: true
-                                }} 
+                                    loop: true,
+                                }}
                             />
                         </h1>
                     </Fade>
                     <Fade bottom>
                         <div className="home-buttons">
-                            <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' rel='noreferrer' target='_blank'>Hire Me</a>
-                            <a className='btn btn-cv' href={resumeUrl} rel="noopener noreferrer">My Resume</a>
+                            <a className="btn btn-hire" href="https://api.whatsapp.com/send?phone=8539067315" rel="noreferrer" target="_blank">
+                                Hire Me
+                            </a>
+                            <a className="btn btn-cv" href={resumeUrl} rel="noopener noreferrer" target="_blank">
+                                My Resume
+                            </a>
                         </div>
                     </Fade>
                 </div>
             </div>
         </>
     );
-}
+};
 
 export default Home;

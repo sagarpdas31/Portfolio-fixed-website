@@ -1,109 +1,188 @@
-/* .navbar-profile-pic img{
-    border-radius: 90px;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    vertical-align: middle;
-    margin: 0 auto;
-    border: 2px solid green;
-    border-radius: 50%; 
-    object-fit: cover;
-    padding-top:1px;
+/* ── FONT IMPORT ───────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap');
+
+/* Aptos isn't on Google Fonts — Nunito is the closest web-safe match.
+   If you have Aptos locally, use: font-family: 'Aptos', 'Nunito', sans-serif; */
+
+/* ── PROFILE ───────────────────────────────────── */
+.navbar-profile-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Aptos', 'Nunito', sans-serif;
 }
-
-.nav-items{
-    color: white;
-    margin-top: 30px;
-}
-
-.nav-link{
-    margin-top: 20px;
-    cursor: pointer;
-    margin-left: 25px;
-}
-
-.nav-link:hover{
-    color: rgb(242, 213, 24);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.nav-link svg{
-    margin-right: 10px;
-    width: 25px;
-    height: 25px;
-}
-
-.nav-link:hover {
-  color: #f29f67;
-}
-
-.nav-link .active {
-  color: #f29f67;
-  border-left: 5px solid #f29f67;
-  padding-left: 10px;
-  text-decoration: none;
-}
-
-.nav-link .acttive {
-  color: #f29f67;
-  border-left: 5px solid #f29f67;
-  padding-left: 10px;
-  text-decoration: none;
-} */
-
-
 
 .navbar-profile-pic img {
-    border-radius: 90px;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    vertical-align: middle;
-    margin: 0 auto;
-    border: 2px solid green;
-    border-radius: 50%;
-    object-fit: cover;
-    padding-top: 1px;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.12);
+  display: block;
+  transition: box-shadow 0.25s;
 }
 
+.navbar-profile-pic img:hover {
+  box-shadow: 0 0 0 7px rgba(74, 222, 128, 0.2);
+}
+
+.profile-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade8088;
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.status-text {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4ade80;
+  white-space: nowrap;
+  font-family: 'Aptos', 'Nunito', sans-serif;
+}
+
+/* ── NAV GROUPS & DIVIDER ──────────────────────── */
 .nav-items {
-    color: white;
-    margin-top: 30px;
+  width: 100%;
+  padding: 16px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Aptos', 'Nunito', sans-serif;
 }
 
+.nav-items--collapsed {
+  padding: 16px 6px 10px;
+  align-items: center;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nav-divider {
+  height: 1px;
+  margin: 8px 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 1px;
+}
+
+/* ── LINK ROW ──────────────────────────────────── */
 .nav-link {
-    margin-top: 20px;
-    cursor: pointer;
-    margin-left: 25px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.nav-link:hover {
-    color: rgb(242, 213, 24);
-    font-weight: bold;
-    text-decoration: underline;
+.nav-link a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-family: 'Aptos', 'Nunito', sans-serif;
+
+  /* ✅ KEY FIX: always white — works on dark sidebar in both modes */
+  color: #ffffff;
+
+  transition: background 0.15s, color 0.15s;
+  position: relative;
+  cursor: pointer;
 }
 
-.nav-link svg {
-    margin-right: 10px;
-    width: 25px;
-    height: 25px;
+/* ── FORCE SIDEBAR DARK IN BOTH MODES ─────────── */
+.navbar,
+.sidebar,
+.nav-container {
+  background: #0f1520 !important;
+  color:white
 }
 
-.nav-link:hover {
-    color: #f29f67;
+.nav-link a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.nav-link .active {
-    color: #f29f67;
-    border-left: 5px solid #f29f67;
-    padding-left: 10px;
-    text-decoration: none;
+/* ── ACTIVE STATE ──────────────────────────────── */
+.nav-link a.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+  border-left: none;
+  padding-left: 12px;
 }
 
-.nav-link .acttive {
-    color: #f29f67;
-    border-left: 5px solid #f29f67;
-    padding-left: 10px;
-    text-decoration: none;
+.nav-link a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 54%;
+  background: #4ade80;
+  border-radius: 0 2px 2px 0;
 }
+
+/* ── ICON CHIP ─────────────────────────────────── */
+.nav-icon-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.09);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.nav-icon-chip svg {
+  width: 17px !important;
+  height: 17px !important;
+  display: block;
+}
+
+.nav-link a:hover .nav-icon-chip,
+.nav-link a.active .nav-icon-chip {
+  background: rgba(74, 222, 128, 0.15);
+}
+
+/* ── LABEL ─────────────────────────────────────── */
+.nav-label {
+  line-height: 1;
+  white-space: nowrap;
+  font-family: 'Aptos', 'Nunito', sans-serif;
+}
+
+/* ── COLLAPSED (icon-only) ─────────────────────── */
+.nav-items--collapsed .nav-link a {
+  padding: 9px;
+  justify-content: center;
+}   

@@ -1,87 +1,209 @@
-
+/* ── Home Container ─────────────────────────────────────────── */
 .home-container {
-  height: 250px;
-  color: white;
-  padding-left: 150px;
+    min-height: 280px;
+    color: white;
+    padding-left: 150px;
+    padding-right: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
+
+/* Subtle animated gradient mesh background */
+.home-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 80% at 10% 50%, rgba(19,135,129,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 20%, rgba(18,119,219,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Decorative horizontal accent line at bottom */
+.home-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(19,135,129,0.6), rgba(18,119,219,0.3), transparent);
+}
+
+.home-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+/* ── Greeting ───────────────────────────────────────────────── */
 .home-content h2 {
-  padding: 5px;
-  padding-top: 50px;
-  /* margin-left: 150px; */
-}
-.home-content h1 {
-  color: rgb(53, 239, 106);
-  letter-spacing: 2px;
-  /* margin-left: 150px; */
-  padding: 5px;
-}
-.home-buttons {
-  /* margin-left: 150px; */
-  margin-top: 20px;
-}
-.home-buttons .btn-hire {
-  background-color: rgb(18, 119, 219);
-  color: white;
-  width: 120px;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.home-buttons .btn-hire:hover {
-  background-color: rgb(18, 119, 219);
-  color: white;
-  width: 120px;
-  font-size: 21px;
-  box-shadow: 12px 8px 12px rgba(0, 128, 115, 0.75);
-  transform: translateY(-2px);
-}
-.home-buttons .btn-cv {
-  background-color: rgb(5, 163, 191);
-  color: white;
-  width: 150px;
-  font-size: 20px;
-  margin-left: 20px;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.home-buttons .btn-cv:hover {
-  background-color: rgb(5, 163, 191);
-  color: #FFFFFF;
-  width: 150px;
-  font-size: 20px;
-  box-shadow: 10px 8px 12px rgba(0, 128, 115, 0.75);
-  transform: translateY(-2px);
-}
-.theme-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  background-color: #1e1e1e;
-  margin-top: 20px;
-  text-align: center;
-  position: fixed;
-  right: 0;
-  cursor: pointer;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  z-index: 1;
-}
-/* ============= */
-@media (max-width: 600px) {
-  .home-container {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
     padding: 0;
-    margin: 0;
-    margin-top: 50px;
-  }
-  .home-container h2 {
-    font-size: 24px;
-  }
-  .home-container h1 {
-    font-size: 24px;
-  }
+    margin-bottom: 6px;
+    font-family: Cambria, Cochin, Georgia, Times, serif;
+    position: relative;
+    display: inline-block;
+}
+
+/* small decorative dash before greeting */
+.home-content h2::before {
+    content: '—';
+    margin-right: 10px;
+    color: #35ef6a;
+    font-style: normal;
+    opacity: 0.7;
+}
+
+/* ── Typewriter heading ─────────────────────────────────────── */
+.home-content h1 {
+    color: rgb(53, 239, 106);
+    letter-spacing: 2px;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 2.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 0 32px rgba(53,239,106,0.25);
+    min-height: 2.6rem; /* prevent layout shift while typewriter loads */
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.home-buttons {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.home-buttons .btn {
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 9px 28px;
+    border: none;
+    transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1),
+                box-shadow 0.28s ease,
+                filter 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine sweep on hover */
+.home-buttons .btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.18), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.45s ease;
+}
+.home-buttons .btn:hover::after { left: 130%; }
+
+.home-buttons .btn-hire {
+    background: linear-gradient(135deg, rgb(18,119,219), rgb(14,90,170));
+    color: white;
+    min-width: 120px;
+}
+
+.home-buttons .btn-hire:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(18,119,219,0.45);
+    filter: brightness(1.08);
+}
+
+.home-buttons .btn-cv {
+    background: linear-gradient(135deg, rgb(5,163,191), rgb(4,128,150));
+    color: white;
+    min-width: 140px;
+    margin-left: 0; /* gap handles spacing now */
+}
+
+.home-buttons .btn-cv:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(5,163,191,0.45);
+    filter: brightness(1.08);
+}
+
+/* ── Theme Toggle ───────────────────────────────────────────── */
+.theme-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    background: linear-gradient(135deg, #1e2a2a, #2a3a3a);
+    margin-top: 20px;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    z-index: 100;
+    box-shadow: -3px 3px 14px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-right: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.theme-btn:hover {
+    background: linear-gradient(135deg, #2a3a3a, #3a4a4a);
+    box-shadow: -4px 4px 20px rgba(0,0,0,0.45);
+    transform: translateX(-3px);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .home-container {
+        padding-left: 80px;
+        padding-right: 20px;
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-container {
+        padding: 0 16px;
+        margin-top: 50px;
+        min-height: 220px;
+    }
+    .home-content {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .home-content h2 {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+    }
+    .home-content h1 {
+        font-size: 1.45rem;
+        letter-spacing: 1px;
+    }
+    .home-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+    }
+    .home-buttons .btn {
+        font-size: 0.9rem;
+        padding: 8px 22px;
+    }
+    .home-container::after {
+        left: 0;
+    }
 }

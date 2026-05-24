@@ -1,45 +1,170 @@
-
 .mobile-nav {
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
-.mobile-nav-header {
-  height: 60px;
-  width: 100%;
-  background-color: #045f85;
-  padding: 10px;
+
+/* HEADER */
+.mnav-header {
+  height: 58px;
+  background: rgba(12, 14, 18, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
 }
-.mobile-nav-header .mobile-nav-icon {
-  color: white;
+.mnav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.mnav-title {
+  font-family: 'Syne', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.mnav-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px #4ade8066;
+}
+
+/* BURGER */
+.burger {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
 }
-.mobile-nav-title {
-  margin-left: 20px;
-  color: #f29f67;
-  font-weight: bold;
-  text-transform: capitalize;
-  vertical-align: middle;
-  font-size: 20px;
+.burger:hover { background: rgba(255, 255, 255, 0.12); }
+.bar {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
 }
-.mobile-nav-menu .nav-items {
-  height: auto;
-  margin-top: -2px;
-  width: 220px;
-  background-color: #05996a;
-  padding: 10px;
-  padding-bottom: 20px;
-  border-bottom-right-radius: 10px;
-  font-weight: bold;
-  font-size: large;
+.burger.open .bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burger.open .bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* OVERLAY */
+.mnav-overlay {
+  position: fixed;
+  inset: 58px 0 0 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 99;
 }
+.mnav-overlay.open { opacity: 1; pointer-events: all; }
+
+/* DRAWER */
+.mnav-drawer {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  width: 240px;
+  height: calc(100dvh - 58px);
+  background: #13141a;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  transform: translateX(-100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  padding: 12px 0;
+  overflow-y: auto;
+}
+.mnav-drawer.open { transform: translateX(0); }
+
+/* SECTION LABELS */
+.mnav-section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 14px 20px 6px;
+  margin: 0;
+}
+
+/* NAV ITEMS */
+.mnav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.15s, color 0.15s;
+}
+.mnav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+}
+.mnav-item.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+.mnav-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 55%;
+  background: #4ade80;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ICON CONTAINER */
+.mnav-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.mnav-item.active .mnav-icon { background: rgba(74, 222, 128, 0.1); }
+.mnav-item:hover .mnav-icon { background: rgba(255, 255, 255, 0.1); }
+
+/* DIVIDER */
+.mnav-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 8px 0;
+}
+
+/* HIDE ON DESKTOP */
 @media (min-width: 600px) {
-  .mobile-nav {
-    display: none;
-  }
+  .mobile-nav { display: none; }
 }
-
-
-
