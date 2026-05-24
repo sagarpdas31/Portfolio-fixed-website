@@ -1,177 +1,53 @@
-// import React from 'react';
-// import Typewriter from "typewriter-effect";
-// import './home.css';
-// import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-// import { useTheme } from '../../Context/ThemeContext';
-// import Fade from 'react-reveal/Fade';
-
-// const Home = () => {
-//     const [theme, setTheme] = useTheme();
-    
-//     // Handle theme
-//     const handleTheme = () => {
-//         setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
-//     };
-    
-//     const resumeUrl = 'https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view?usp=sharing';
-    
-//     return (
-//         <>
-//             <div className="container-fluid home-container" id="home">
-//                 <div className="theme-btn" onClick={handleTheme}>
-//                     {theme === "light" ? (
-//                         <BsFillMoonStarsFill size={30} />
-//                     ) : (
-//                         <BsFillSunFill size={30} />
-//                     )}
-//                 </div>
-//                 <div className="container home-content">
-//                     <Fade right>
-//                         <h2>Hi I'm Sagar</h2>
-//                         <h1>
-//                             <Typewriter 
-//                                 options={{
-//                                     strings: ["Full Stack Developer!", "MERN Stack Developer!", "Data Structure & Algorithms!", "C++!"],
-//                                     autoStart: true,
-//                                     loop: true
-//                                 }} 
-//                             />
-//                         </h1>
-//                     </Fade>
-//                     <Fade bottom>
-//                         <div className="home-buttons">
-//                             <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' rel='noreferrer' target='_blank'>Hire Me</a>
-//                             <a className='btn btn-cv' href={resumeUrl} rel="noopener noreferrer">My Resume</a>
-//                         </div>
-//                     </Fade>
-//                 </div>
-//             </div>
-//         </>
-//     );
-// }
-
-// export default Home;
-
 import React from 'react';
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 import './home.css';
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useTheme } from '../../Context/ThemeContext';
 import Fade from 'react-reveal/Fade';
 
-const roles = [
-  'Full Stack AI Developer',
-  'MERN Stack Developer',
-  'Python Developer',
-  'Data Engineer',
-  'C++ & DSA',
-];
-
-const tags = [
-  { label: 'Full Stack AI Developer', dot: 'green'  },
-  { label: 'Python Developer',        dot: 'blue'   },
-  { label: 'Data Engineer',           dot: 'orange' },
-  { label: 'MERN Stack',              dot: 'pink'   },
-  { label: 'DSA · C++',               dot: 'cyan'   },
-];
-
 const Home = () => {
-  const [theme, setTheme] = useTheme();
-
-  const handleTheme = () => {
-    setTheme(function(prev) {
-      return prev === 'light' ? 'dark' : 'light';
-    });
-  };
-
-  return (
-    <div className="home-container" id="home">
-
-      <div className="bg-grid" />
-      <div className="orb orb-1" />
-      <div className="orb orb-2" />
-
-      <div className="theme-btn" onClick={handleTheme}>
-        {theme === 'light' ? (
-          <BsFillMoonStarsFill size={22} />
-        ) : (
-          <BsFillSunFill size={22} />
-        )}
-      </div>
-
-      <div className="hero">
-        <div className="hero-inner">
-
-          <Fade top>
-            <div className="greeting-pill">
-              <span className="live-dot" />
-              Available for work
+    const [theme, setTheme] = useTheme();
+    
+    // Handle theme
+    const handleTheme = () => {
+        setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
+    };
+    
+    const resumeUrl = 'https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view?usp=sharing';
+    
+    return (
+        <>
+            <div className="container-fluid home-container" id="home">
+                <div className="theme-btn" onClick={handleTheme}>
+                    {theme === "light" ? (
+                        <BsFillMoonStarsFill size={30} />
+                    ) : (
+                        <BsFillSunFill size={30} />
+                    )}
+                </div>
+                <div className="container home-content">
+                    <Fade right>
+                        <h2>Hi I'm Sagar</h2>
+                        <h1>
+                            <Typewriter 
+                                options={{
+                                    strings: ["Full Stack Developer!", "MERN Stack Developer!", "Data Structure & Algorithms!", "C++!"],
+                                    autoStart: true,
+                                    loop: true
+                                }} 
+                            />
+                        </h1>
+                    </Fade>
+                    <Fade bottom>
+                        <div className="home-buttons">
+                            <a className='btn btn-hire' href='https://api.whatsapp.com/send?phone=8539067315' rel='noreferrer' target='_blank'>Hire Me</a>
+                            <a className='btn btn-cv' href={resumeUrl} rel="noopener noreferrer">My Resume</a>
+                        </div>
+                    </Fade>
+                </div>
             </div>
-          </Fade>
-
-          <Fade right>
-            <div className="fade-group">
-              <h2 className="hero-name">
-                Hi, I&apos;m <span className="name-gradient">Sagar</span>
-              </h2>
-              <div className="typewriter-wrap">
-                <span className="tw-prefix">//</span>
-                <Typewriter
-                  options={{
-                    strings: roles,
-                    autoStart: true,
-                    loop: true,
-                    delay: 60,
-                    deleteSpeed: 32,
-                  }}
-                />
-              </div>
-            </div>
-          </Fade>
-
-          <Fade bottom>
-            <div className="fade-group">
-              <p className="hero-desc">
-                Building end-to-end digital products — from intelligent ML
-                pipelines to blazing-fast full-stack apps and clean data
-                architectures.
-              </p>
-              <div className="tag-row">
-                {tags.map(function(t) {
-                  return (
-                    <span key={t.label} className={'tag tag-' + t.dot}>
-                      <span className="tag-dot" />
-                      {t.label}
-                    </span>
-                  );
-                })}
-              </div>
-              <div className="home-buttons">
-                
-                  className="btn btn-hire"
-                  href="https://api.whatsapp.com/send?phone=8539067315"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Hire Me
-                </a>
-                
-                  className="btn btn-cv"
-                  href="https://drive.google.com/file/d/1hOU5m1YZxZVMVgH2PqajHgy-NDH3P-MS/view"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  My Resume
-                </a>
-              </div>
-            </div>
-          </Fade>
-
-        </div>
-      </div>
-
-    </div>
-  );
-};
+        </>
+    );
+}
 
 export default Home;
