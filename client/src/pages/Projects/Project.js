@@ -26,7 +26,7 @@ const projectData = [
         image:
             "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170",
         skills: ["Node", "Socket.io", "React", "MongoDB"],
-        link: "https://socilamediafinalfixed-9iof.onrender.com/",
+        link: "https://full-stack-socialmedia-app.onrender.com/",
     },
  
     {
