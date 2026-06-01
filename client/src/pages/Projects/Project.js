@@ -2,18 +2,15 @@ import React, { useState } from "react";
 import "./Project.css";
 import RubberBand from "react-reveal/RubberBand";
 import Spin from "react-reveal/Spin";
-
 const projectData = [
-       {
+    {
         id: 1,
         title: "Next-FLow.AI",
-        image:
-            "https://media.istockphoto.com/id/2213677534/photo/large-language-model-with-ai-technology-user-working-on-laptop-in-llm-data-performrange.jpg?s=2048x2048&w=is&k=20&c=Note6dDQEQMwT2X7Sz62AQ4zhdk7_-HuNQUJBGkNZ9Q=",
+        image: "https://media.istockphoto.com/id/2213677534/photo/large-language-model-with-ai-technology-user-working-on-laptop-in-llm-data-performrange.jpg?s=2048x2048&w=is&k=20&c=Note6dDQEQMwT2X7Sz62AQ4zhdk7_-HuNQUJBGkNZ9Q=",
         skills: ["Next.js", "LLM", "TypeScript", "PostgreSQL"],
         link: "https://next-flow-galaxy-ai-kx88.vercel.app/",
     },
-
-       {
+    {
         id: 2,
         title: "Ecommerce Website",
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
@@ -23,27 +20,23 @@ const projectData = [
     {
         id: 3,
         title: "Chat Web Application",
-        image:
-            "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170",
+        image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1170",
         skills: ["Node", "Socket.io", "React", "MongoDB"],
         link: "https://full-stack-socialmedia-app.onrender.com/",
     },
- 
     {
         id: 4,
-        title: "Leave Management System",
-        image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
-        skills: ["Next.js", "Node", "Express", "Mongo"],
-       link: " https://leave-managament-system.vercel.app/"
-        // link: "https://flora-frontend.onrender.com/",
+        title: "Flora-Vision",
+        image: "https://images.unsplash.com/photo-1768400444194-5c83d1a349c8?q=80&w=1172",
+        skills: ["React", "Node", "Express", "Python"],
+        link: "https://flora-frontend.onrender.com/",
     },
     {
         id: 5,
-        title: "LinkLoom Social Media",
-        image:
-            "https://media.istockphoto.com/id/2154222115/photo/multicolored-threads-background.jpg?s=2048x2048&w=is&k=20&c=J18d30lLMwDOmEzappjb8QtGnMVQ3j52QCbW1xEIWLk=",
-        skills: ["Node", "Express", "React", "MongoDB"],
-        link: "https://linkloomsocialmedia.vercel.app/",
+        title: "Fire Weather Index",
+        image: "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1170",
+        skills: ["Flask", "Numpy", "Pandas", "Scikit-learn"],
+        link: "https://fire-weather-index-prediction-system.onrender.com/",
     },
     {
         id: 6,
@@ -54,15 +47,19 @@ const projectData = [
     },
     {
         id: 7,
-        title: "Flora-Vision",
-        image:
-            "https://images.unsplash.com/photo-1768400444194-5c83d1a349c8?q=80&w=1172",
-        skills: ["React", "Node", "Express", "Python"],
-        link: "https://flora-frontend.onrender.com/",
+        title: "LinkLoom Social Media",
+        image: "https://media.istockphoto.com/id/2154222115/photo/multicolored-threads-background.jpg?s=2048x2048&w=is&k=20&c=J18d30lLMwDOmEzappjb8QtGnMVQ3j52QCbW1xEIWLk=",
+        skills: ["Node", "Express", "React", "MongoDB"],
+        link: "https://linkloomsocialmedia.vercel.app/",
     },
-
-  
-];  
+    {
+        id: 8,
+        title: "Leave Management System",
+        image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
+        skills: ["Next.js", "Node", "Express", "Mongo"],
+        link: "https://leave-managament-system.vercel.app/",
+    },
+];
 
 /* =========================
    COMPONENT
