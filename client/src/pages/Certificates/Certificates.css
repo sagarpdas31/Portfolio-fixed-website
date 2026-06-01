@@ -14,7 +14,7 @@
 
 #dark .card {
   background: #1e1e1e;
-  border: 1px solid #333;
+  border: 1px solid #444;
   color: #fff;
 }
 
@@ -26,14 +26,19 @@
 }
 
 .certificates .card:hover {
-  background-color: rgb(236, 199, 195);
+  background-color: #f5f0e8;
   border-radius: 8px;
   box-shadow: 12px 15px 20px rgba(46, 61, 73, 0.15);
   transition: box-shadow 0.3s ease;
 }
 
+#dark .certificates .card:hover {
+  background-color: #2a3f3f;
+  box-shadow: 12px 15px 20px rgba(0, 200, 180, 0.2);
+}
+
 .cert-title {
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 /* ================= BUTTON WRAPPER ================= */
@@ -97,5 +102,3 @@
     margin-top: 50px;
   }
 }
-
-
