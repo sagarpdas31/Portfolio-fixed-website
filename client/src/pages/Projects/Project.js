@@ -8,7 +8,7 @@ const projectData = [
         title: "Resume Matcher AI",
         image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1170",
         skills: ["Flask", "Langchain", "Docker", "VectorDB"],
-        link: "https://drive.google.com/file/d/1tNqNoZPXntqFG6WG8LO4JXNQrgREifiD/view?usp=sharing",
+        link: "https://resumematch-ui.onrender.com/",
     },
     {
         id: 2,
