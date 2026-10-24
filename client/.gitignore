@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+Add-Content .gitignore "`n.env`nserver/.env"
+
+
 # testing
 /coverage
 

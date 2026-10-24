@@ -25,7 +25,7 @@ const Education = () => {
                     >
                         <h3 className="vertical-timeline-element-title">Baechlor of Technology</h3>
                         <p className="vertical-timeline-element-subtitle">
-                            Indian Institute of Information Technology Ranchi (Jharkhand)
+                            Indian Institute of Information Technology Ranchi 
                         </p>
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
@@ -38,7 +38,7 @@ const Education = () => {
                     >
                         <h3 className="vertical-timeline-element-title">Intermediate of Science</h3>
                         <p className="vertical-timeline-element-subtitle">
-                            GSIM Korrah Hazaribag
+                            ST Merry Public School Hazaribag
                         </p>
                     </VerticalTimelineElement>
 

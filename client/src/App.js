@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div id={theme}>
-        <ToastContainer />
+        <ToastContainer position="top-right" autoClose={3000} />
         <MobileNav />
         <Layout />
 

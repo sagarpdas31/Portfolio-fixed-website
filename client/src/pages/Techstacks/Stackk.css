@@ -1,56 +1,106 @@
-.techstack{
-    padding-left: 140px;
-    margin-top: 60px;
-}
-.techstack hr{
-    color: #026560;
-    margin: 10px auto;
+.techstack {
+  padding-left: 140px;
+  margin-top: 60px;
 }
 
-.techstack h2{
-    color: rgb(8, 180, 8);
-    font-weight: bold;
+.techstack hr {
+  color: #026560;
+  margin: 10px auto;
 }
 
-.techstack .card{
-        cursor: pointer;
+.techstack h2 {
+  color: rgb(8, 180, 8);
+  font-weight: bold;
 }
 
-.techstack .tech-icon{
-   font-size: 2rem;
-    margin-right: 10px;
+/* ---------- Card: fixed height, sab equal ---------- */
+.techstack .card {
+  cursor: pointer;
+  height: 72px;
 }
 
+.techstack .tech-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* left se start, taaki icons ek line me aayein */
+  gap: 12px;
+  padding: 8px 14px;
+}
+
+/* ---------- Icon: fixed box, sab libraries ke icons same size ---------- */
+.techstack .tech-icon-box {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.techstack .tech-icon {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* ---------- Naam: max 2 lines, phir ... ---------- */
+.techstack .tech-name {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* ---------- Hover ---------- */
 .techstack .card:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-color: #138781;
   color: white;
-
   transition: 0.51s;
 }
 
-#dark .techstack h2{
+#dark .techstack h2 {
   color: yellow;
 }
 
-#dark .stack p{
+#dark .techstack p {
   color: rgb(193, 0, 0);
 }
 
-@media (max-width:600px)
-{
-  .techstack{
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .techstack {
     margin: 0;
     padding: 4px;
     margin-top: 30px;
-
   }
-  .techstack hr{
+
+  .techstack hr {
     width: 280px;
   }
- .card{
-    padding-right: 6px;
+
+  .techstack .card {
+    height: 64px;
+  }
+
+  .techstack .tech-card-body {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  .techstack .tech-icon-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  .techstack .tech-name {
+    font-size: 0.8rem;
   }
 }
