@@ -146,7 +146,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 // Local me .env.development se aata hai, production me khali (same domain)
 // const API_URL = process.env.REACT_APP_API_URL || "";
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_URL = process.env.REACT_APP_API_URL || "s";
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
